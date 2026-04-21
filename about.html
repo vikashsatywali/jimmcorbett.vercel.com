@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jim Corbett National Park | India's Oldest National Park</title>
+    <meta name="description" content="Learn about Jim Corbett National Park, its history, wildlife, geography, and safari zones. Plan your ultimate wildlife adventure.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('aboutt.jpg') center/cover no-repeat;
+            height: 70vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Two Column Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .content-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 30px;
+        }
+        
+        .timeline-list {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid var(--accent-color);
+        }
+        .timeline-list li {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .timeline-list li::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+        .timeline-list strong {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .info-card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        .info-card i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        .info-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .zone-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .zone-tag {
+            background: var(--primary-light);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91-9876543210</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="index.html#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container fade-up">
+            <h1>About Jim Corbett</h1>
+            <p>India's First & Most Prestigious National Park</p>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="section">
+        <div class="container content-grid">
+            <div>
+                <h4 class="section-subtitle">Introduction</h4>
+                <h2 class="section-title">The Legacy of Jim Corbett</h2>
+                <p>Jim Corbett National Park is India’s oldest and one of the most prestigious national parks, located in the beautiful state of Uttarakhand near Ramnagar. Known for its rich biodiversity, dense forests, and thriving population of Royal Bengal Tigers, the park attracts thousands of wildlife enthusiasts, photographers, and nature lovers every year.</p>
+                <p>Established in 1936 as Hailey National Park, it was later renamed in honor of the legendary conservationist Jim Corbett, who played a key role in wildlife protection and conservation in India.</p>
+            </div>
+            <div class="intro-image-wrapper">
+                <img src="tigerr.jpg" alt="Tiger in Forest" class="intro-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Geo -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h4 class="section-subtitle">Location & Geography</h4>
+                <h2 class="section-title">Nestled in the Himalayas</h2>
+                <p style="max-width: 800px; margin: 0 auto;">Jim Corbett National Park is situated in the Nainital district of Uttarakhand, nestled in the foothills of the Himalayas. The park is spread across approximately 520 square kilometers and is enriched by the Ramganga River, which enhances its scenic beauty and ecological diversity.</p>
+            </div>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h4>Nearest Town</h4>
+                    <p>Ramnagar</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <h4>State</h4>
+                    <p>Uttarakhand</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-area"></i>
+                    <h4>Area</h4>
+                    <p>Approx. 520 sq. km</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-tree"></i>
+                    <h4>Landscape</h4>
+                    <p>Dense forests, grasslands & river belts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flora & Fauna -->
+    <section class="section">
+        <div class="container content-grid">
+            <div class="intro-image-wrapper">
+                <img src="elephant.jpg" alt="Elephant in Corbett" class="intro-image">
+            </div>
+            <div>
+                <h4 class="section-subtitle">Biodiversity</h4>
+                <h2 class="section-title">Flora & Fauna</h2>
+                <p>Jim Corbett is a paradise for wildlife lovers, offering a wide range of flora and fauna. It is also a crucial part of India’s Project Tiger, focusing on the conservation of endangered tigers.</p>
+                
+                <div class="content-card">
+                    <h3><i class="fa-solid fa-paw" style="color: var(--accent-color);"></i> Major Wildlife Attractions</h3>
+                    <ul class="feature-list" style="margin: 15px 0;">
+                        <li><i class="fa-solid fa-check"></i> Royal Bengal Tiger</li>
+                        <li><i class="fa-solid fa-check"></i> Asian Elephant</li>
+                        <li><i class="fa-solid fa-check"></i> Leopard</li>
+                        <li><i class="fa-solid fa-check"></i> Deer (Spotted Deer, Sambar)</li>
+                        <li><i class="fa-solid fa-check"></i> Wild Boar</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fa-solid fa-crow" style="color: var(--accent-color);"></i> Bird Watching Paradise</h3>
+                    <p>The park is home to over 600 species of birds, including Hornbills, Kingfishers, Eagles, and majestic Migratory birds (especially in winter).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History -->
+    <section class="section bg-light">
+        <div class="container content-grid">
+            <div>
+                <h4 class="section-subtitle">Our Heritage</h4>
+                <h2 class="section-title">History of Jim Corbett</h2>
+                <p>The history of Jim Corbett National Park reflects India’s early efforts in wildlife conservation. The park continues to play a vital role in maintaining ecological balance and protecting our majestic wildlife.</p>
+                
+                <ul class="timeline-list">
+                    <li>
+                        <strong>1936</strong>
+                        Established as Hailey National Park, being the first national park in India.
+                    </li>
+                    <li>
+                        <strong>1957</strong>
+                        Renamed as Jim Corbett National Park to honor the author and conservationist.
+                    </li>
+                    <li>
+                        <strong>1973</strong>
+                        Became the first park to come under the prestigious Project Tiger initiative.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="content-card" style="background: var(--primary-color); color: white; border-left: none;">
+                    <h3 style="color: white; margin-bottom: 20px;"><i class="fa-solid fa-shield-cat" style="color: var(--accent-color);"></i> Why Visit Jim Corbett?</h3>
+                    <ul class="feature-list" style="margin: 0; color: white;">
+                        <li style="color: white;"><i class="fa-solid fa-star"></i> India’s oldest national park</li>
+                        <li style="color: white;"><i class="fa-solid fa-star"></i> One of the best places for tiger spotting</li>
+                        <li style="color: white;"><i class="fa-solid fa-star"></i> Perfect blend of adventure and nature</li>
+                        <li style="color: white;"><i class="fa-solid fa-star"></i> Ideal destination for families, couples, and wildlife enthusiasts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safari & Zones -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h4 class="section-subtitle">Expeditions</h4>
+                <h2 class="section-title">Safari Experience & Zones</h2>
+                <p style="max-width: 800px; margin: 0 auto;">One of the main attractions of Jim Corbett is its thrilling jungle safari experience. These safaris take you deep into the forest, offering a chance to witness wildlife in their natural habitat.</p>
+            </div>
+
+            <div class="content-grid" style="margin-top: 50px;">
+                <div class="content-card">
+                    <h3><i class="fa-solid fa-truck-monster" style="color: var(--accent-color);"></i> Types of Safari</h3>
+                    <p><strong>Jeep Safari:</strong> A personalized standard experience entering the core and buffer zones.</p>
+                    <p><strong>Canter Safari:</strong> A communal open-bus safari exclusively operating inside the Dhikala zone.</p>
+                    <p class="mt-20" style="font-size: 0.9rem;"><em>Tip: Early morning and evening safaris provide the best opportunities for wildlife sightings, especially tigers.</em></p>
+                </div>
+                
+                <div class="content-card">
+                    <h3><i class="fa-solid fa-map" style="color: var(--accent-color);"></i> Tourism Zones</h3>
+                    <p>The park is divided into multiple tourism zones, each differing in landscape, wildlife density, and safari experience:</p>
+                    <div class="zone-tags">
+                        <span class="zone-tag">Dhikala (Core)</span>
+                        <span class="zone-tag">Bijrani</span>
+                        <span class="zone-tag">Jhirna</span>
+                        <span class="zone-tag">Dhela</span>
+                        <span class="zone-tag">Durga Devi</span>
+                        <span class="zone-tag">Sitabani</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Mission -->
+    <section class="cta-section" style="padding: 80px 0;">
+        <div class="cta-overlay"></div>
+        <div class="container cta-content text-center">
+            <h4 class="section-subtitle" style="color: var(--accent-color);">Our Mission</h4>
+            <h2 style="font-family: var(--font-body); font-size: 2rem;">Seamless & Unforgettable Experiences</h2>
+            <p style="max-width: 800px; margin: 0 auto 30px;">Our mission is to provide travelers with a seamless and unforgettable Jim Corbett experience. From safari bookings to premium resort stays and complete tour planning, we ensure comfort, safety, and satisfaction at every step.</p>
+            
+            <h3 style="color: white; font-family: var(--font-heading); margin-bottom: 25px;">Plan Your Trip Today</h3>
+            <p style="margin-bottom: 30px;">Experience the thrill of the wild and the serenity of nature at Jim Corbett National Park. Book your safari and stay today to create memories that last a lifetime.</p>
+            
+            <div class="cta-buttons">
+                <a href="index.html#safari" class="btn-primary large">Start Your Journey Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: var(--white);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Park</a></li>
+                        <li><a href="index.html#safari">Safari Booking</a></li>
+                        <li><a href="index.html#zones">Zones Overview</a></li>
+                        <li><a href="package.html">Tour Packages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="index.html#best-time">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="index.html#things-to-do">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9876543210</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

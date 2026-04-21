@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Zones in Jim Corbett National Park</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore the best safari zones in Jim Corbett National Park. Learn about Dhikala, Bijrani, Jhirna, Dhela, and more. Choose the best zone for tiger sightings and bird watching.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Editorial Typography & Base Styles */
+        body { font-size: 1.1rem; line-height: 1.8; color: #444; }
+        .playfair { font-family: 'Playfair Display', serif; }
+        .outfit { font-family: 'Outfit', sans-serif; }
+        
+        /* Hero Section */
+        .zone-hero {
+            background-image: linear-gradient(to bottom, rgba(0, 30, 10, 0.7), rgba(0, 0, 0, 0.5)), url('zones-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 8px solid var(--primary-color);
+        }
+
+        .zone-hero h1 {
+            color: #fff;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .zone-hero p {
+            color: #f1f1f1;
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Content Formatting */
+        .content-box {
+            padding: 80px 0;
+            background: #f9fbf9;
+        }
+
+        /* Zones Grid */
+        .zones-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        /* For the 7th item to be centered optionally, or just leave as is */
+        .zones-grid .zone-card:last-child:nth-child(3n-2) {
+            grid-column: 2; /* Center the 7th item if there's 3 columns */
+        }
+
+        .zone-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eaeaea;
+        }
+
+        .zone-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(46, 139, 87, 0.15);
+        }
+
+        .zone-card-image {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zone-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .zone-card:hover .zone-card-image img {
+            transform: scale(1.05);
+        }
+
+        .zone-card-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 6px 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .zone-card-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .zone-card-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .zone-card-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            flex: 1; /* Pushes button to bottom */
+        }
+
+        .zone-card-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .zone-card-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        @media (max-width: 1024px) {
+            .zones-grid { grid-template-columns: repeat(2, 1fr); }
+            .zones-grid .zone-card:last-child:nth-child(3n-2) { grid-column: auto; }
+        }
+
+        @media (max-width: 768px) {
+            .zones-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91-9876543210</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html" class="active">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Zones Hero -->
+    <header class="zone-hero">
+        <div class="container">
+            <h1 class="playfair">Safari Ecotourism Zones</h1>
+            <p>Select your perfect wilderness destination.</p>
+        </div>
+    </header>
+
+    <!-- Zone Cards Grid -->
+    <section class="content-box">
+        <div class="container">
+            
+            <div style="text-align: center;">
+                <h4 class="section-subtitle">A Zone For Every Explorer</h4>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #555;">Jim Corbett National Park is divided into several ecotourism zones to provide dedicated paths for safari vehicles while preserving the core flora and fauna. Click on a zone to learn more about its specific wildlife, timings, and rules.</p>
+            </div>
+
+            <div class="zones-grid">
+                
+                <!-- Zone 1: Dhikala -->
+                <div class="zone-card">
+                    <div class="zone-card-image">
+                        <img src="dhikal.jpg" alt="Dhikala Zone">
+                        <div class="zone-card-tag">Core Tiger Area</div>
+                    </div>
+                    <div class="zone-card-content">
+                        <h3>Dhikala Zone</h3>
+                        <p>The heart of Corbett. Famous for its massive grasslands, Ramganga river, and unparalleled Bengal tiger sightings.</p>
+                        <a href="dhikala-zone.html" class="zone-card-btn">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Zone 2: Bijrani -->
+                <div class="zone-card">
+                    <div class="zone-card-image">
+                        <img src="bijrani.webp" alt="Bijrani Zone">
+                        <div class="zone-card-tag">Dense Forest</div>
+                    </div>
+                    <div class="zone-card-content">
+                        <h3>Bijrani Zone</h3>
+                        <p>Known for thick Sal forests and interwoven grasslands, offering a perfect mix of tracking and scenic beauty.</p>
+                        <a href="bijrani-zone.html" class="zone-card-btn">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Zone 3: Jhirna -->
+                <div class="zone-card">
+                    <div class="zone-card-image">
+                        <img src="jhirna.jpg" alt="Jhirna Zone">
+                        <div class="zone-card-tag">Open All Year</div>
+                    </div>
+                    <div class="zone-card-content">
+                        <h3>Jhirna Zone</h3>
+                        <p>One of the few zones open throughout the year. Highly reliable for spotting sloth bears, wild boars, and deer.</p>
+                        <a href="jhirna-zone.html" class="zone-card-btn">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Zone 4: Dhela -->
+                <div class="zone-card">
+                    <div class="zone-card-image">
+                        <img src="dhelazone.jpg" alt="Dhela Zone">
+                        <div class="zone-card-tag">Peaceful</div>
+                    </div>
+                    <div class="zone-card-content">
+                        <h3>Dhela Zone</h3>
+                        <p>A serene, newer addition prized for its calm environment, diverse bird species, and incredibly rich biodiversity.</p>
+                        <a href="dhela-zone.html" class="zone-card-btn">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Zone 5: Durga Devi -->
+                <div class="zone-card">
+                    <div class="zone-card-image">
+                        <img src="durgadevi-zone.avif" alt="Durga Devi Zone">
+                        <div class="zone-card-tag">Bird Watching</div>
+                    </div>
+                    <div class="zone-card-content">
+                        <h3>Durga Devi Zone</h3>
+                        <p>Located in a hilly region alongside steep ridges. A global haven for bird watchers and specialized photographers.</p>
+                        <a href="durga-devi-zone.html" class="zone-card-btn">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Zone 6: Garjiya -->
+                <div class="zone-card">
+                    <div class="zone-card-image">
+                        <img src="garjiya.jpg" alt="Garjiya Zone">
+                        <div class="zone-card-tag">New & Scenic</div>
+                    </div>
+                    <div class="zone-card-content">
+                        <h3>Garjiya Zone</h3>
+                        <p>A beautiful new zone established recently. Offers expansive quiet landscapes and excellent chances of sightings.</p>
+                        <a href="garjiya-zone.html" class="zone-card-btn">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Zone 7: Sitabani -->
+                <div class="zone-card">
+                    <div class="zone-card-image">
+                        <img src="sitabani-zone.jpg" alt="Sitabani Zone">
+                        <div class="zone-card-tag">Mythological</div>
+                    </div>
+                    <div class="zone-card-content">
+                        <h3>Sitabani Zone</h3>
+                        <p>Connected with Goddess Sita from the epic Ramayana. A beautifully dense, un-restricted buffer zone perfect for religious nature trips.</p>
+                        <a href="sitabani-zone.html" class="zone-card-btn">View Details &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Guide and Timings -->
+    <section class="content-box">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; border-top: 1px solid #ddd; padding-top: 60px;">
+                
+                <div style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-color);">
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: #111;"><i class="fa-solid fa-route"></i> How to Choose the Best Zone?</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color:var(--primary-color);">Tiger Sightings:</strong> Prefer Dhikala or Bijrani</li>
+                        <li style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color:var(--primary-color);">Budget Safari:</strong> Jhirna or Dhela</li>
+                        <li style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color:var(--primary-color);">Bird Watching:</strong> Durga Devi or Sitabani</li>
+                        <li style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color:var(--primary-color);">Peace & Quiet:</strong> Dhela or Garjiya</li>
+                    </ul>
+                </div>
+
+                <div style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-color);">
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: #111;"><i class="fa-regular fa-clock"></i> Best Time to Visit</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px; font-size: 1.1rem;"><strong>Winter (Nov–Feb):</strong> Pleasant weather & tremendous bird watching.</li>
+                        <li style="margin-bottom: 12px; font-size: 1.1rem;"><strong>Summer (Mar–Jun):</strong> Optimal season for active tiger sightings.</li>
+                        <li style="margin-bottom: 12px; font-size: 1.1rem;"><strong>Monsoon (Jul–Oct):</strong> Main core closed, only Jhirna & Dhela open.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Book With Us Section -->
+    <section class="content-box" style="background:#fff; border-top: 1px solid #eee;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h4 class="section-subtitle">Guaranteed Satisfaction</h4>
+                <h2 class="playfair" style="font-size: 2.5rem; color: #111;">Why Book Safari With Us?</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center; padding: 30px; border: 1px solid #eaeaea; border-radius: 8px;">
+                    <i class="fa-solid fa-file-signature" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 15px;">Guaranteed Permits</h3>
+                    <p style="color: #666; font-size: 1rem;">We ensure your safari permits are booked well in advance with 100% confirmation for your desired zone.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; border: 1px solid #eaeaea; border-radius: 8px;">
+                    <i class="fa-solid fa-users" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 15px;">Expert Guides</h3>
+                    <p style="color: #666; font-size: 1rem;">Our experienced nature guides and skilled drivers know the zones inside out to maximize your wildlife sightings.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; border: 1px solid #eaeaea; border-radius: 8px;">
+                    <i class="fa-solid fa-headset" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 15px;">24/7 Support</h3>
+                    <p style="color: #666; font-size: 1rem;">From planning your itinerary to reaching your safari gate, our local team is available to assist you round the clock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safari Zones FAQ -->
+    <section class="content-box" style="background: #f9fbf9; padding-bottom: 100px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h4 class="section-subtitle">Common Questions</h4>
+                <h2 class="playfair" style="font-size: 2.5rem; color: #111;">Frequently Asked Questions</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+                <!-- FAQ Item 1 -->
+                <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px;">
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 15px; color: #222;">Can I visit the Dhikala zone on a Jeep Safari if I am not staying there?</h4>
+                    <p style="color: #666; font-size: 1.05rem; margin: 0;">No. The Dhikala core zone is strictly reserved for tourists staying at the Dhikala Forest Rest House for Jeep Safaris. Day visitors can only explore Dhikala via the Canter Safari organized by the forest department.</p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px;">
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 15px; color: #222;">How far in advance should I book my safari zone?</h4>
+                    <p style="color: #666; font-size: 1.05rem; margin: 0;">Permits for Jim Corbett open 45 days in advance and get sold out within minutes, especially for peak seasons and popular zones like Dhikala and Bijrani. We highly recommend booking at least 60 days in advance to secure your spot.</p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px;">
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 15px; color: #222;">Can I shift from one zone to another during my safari?</h4>
+                    <p style="color: #666; font-size: 1.05rem; margin: 0;">No, once a safari permit is issued for a specific zone, it is non-transferable and non-refundable. Vehicles are strictly tracked at their respective entry gates, and zone-swapping is strictly prohibited by forest authorities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre Footer / Call To Action -->
+    <section class="cta-section" id="book-safari" style="padding: 100px 0; display:flex; align-items:center; position: relative;">
+        <!-- Reuse existing cta styles inline for ease here or rely on style.css if it exists -->
+        <div style="position: absolute; top:0; left:0; right:0; bottom:0; background: linear-gradient(rgba(10, 25, 15, 0.85), rgba(0,0,0,0.6)), url('') center/cover; z-index: -1;"></div>
+        <div class="container cta-content text-center" style="position: relative; z-index: 1;">
+            <h4 class="outfit" style="color: #e8b059; margin-bottom: 10px; font-weight: 500; font-size: 1.3rem; letter-spacing: 2px;">ADVENTURE AWAITS</h4>
+            <h2 class="playfair" style="margin-bottom: 25px; font-size: 4rem; color: #fff;">Book Your Zone Today 🚀</h2>
+            <p style="margin-bottom: 40px; font-size: 1.3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; color: #fff;">Explore the wild beauty of Jim Corbett by selecting the perfect zone for your adventure. Contact us now for expert guidance and instant booking.</p>
+            <div class="cta-buttons" style="display:flex; justify-content:center; gap:20px;">
+                <a href="#book-safari" class="btn-primary" style="font-size: 1.2rem; padding: 15px 40px; border-radius: 4px; background:var(--primary-color); color:#fff; text-decoration:none;">Select & Book Zone</a>
+                <a href="https://wa.me/919876543210" style="font-size: 1.2rem; padding: 15px 40px; background: #25D366; color: #fff; border-radius: 4px; text-decoration:none;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Booking</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: #fff;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Park</a></li>
+                        <li><a href="#">Safari Booking</a></li>
+                        <li><a href="#">Zones Overview</a></li>
+                        <li><a href="#">Tour Packages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="#">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9876543210</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+

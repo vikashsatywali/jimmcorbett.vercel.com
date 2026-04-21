@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canter Safari in Jim Corbett National Park</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Experience the thrill of wildlife with a Canter Safari in Jim Corbett National Park. Book your 16-seater open bus safari to explore the famous Dhikala core zone.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Editorial Typography & Base Styles */
+        body { font-size: 1.1rem; line-height: 1.8; color: #444; }
+        .playfair { font-family: 'Playfair Display', serif; }
+        .outfit { font-family: 'Outfit', sans-serif; }
+        
+        /* Hero Section */
+        .canter-hero {
+            background-image: linear-gradient(to right, rgba(0, 50, 20, 0.8), rgba(0, 0, 0, 0.5)), url('buss-safari.png');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 8px solid var(--primary-color);
+        }
+
+        .canter-hero h1 {
+            color: #fff;
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .canter-hero p {
+            color: #f1f1f1;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Content Formatting */
+        .content-box {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .content-box.alt-bg {
+            background: #f9fbf9;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Large Intro Text */
+        .intro-lead {
+            font-size: 1.6rem;
+            font-family: 'Playfair Display', serif;
+            color: #222;
+            line-height: 1.8;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-lead::first-letter {
+            font-size: 4rem;
+            float: left;
+            margin-right: 15px;
+            line-height: 1;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Zig Zag Editorial Layout */
+        .editorial-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .editorial-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .editorial-text {
+            flex: 1;
+        }
+
+        .editorial-text h2 {
+            font-size: 2.8rem;
+            color: #111;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .editorial-text p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .editorial-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: -15px 15px 0px rgba(46, 139, 87, 0.1);
+        }
+
+        .editorial-row:nth-child(even) .editorial-image img {
+            box-shadow: 15px 15px 0px rgba(46, 139, 87, 0.1);
+        }
+
+        /* Stylish Lists */
+        .stylish-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .stylish-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+        }
+
+        .stylish-list li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            background: rgba(46, 139, 87, 0.1);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .stylish-list li strong {
+            display: block;
+            color: #222;
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Wide Information Banner */
+        .info-highlight {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #2e8b57;
+            color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 80px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .info-highlight-part {
+            padding: 50px;
+            position: relative;
+        }
+
+        .info-highlight-part:first-child {
+            background: #163a26;
+        }
+
+        .info-highlight-part h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #e8b059;
+        }
+
+        .info-highlight-part p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #e8b059;
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 20px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Content Grid */
+        .content-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .outline-card {
+            border: 2px solid #eaeaea;
+            padding: 40px;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .outline-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #222;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .outline-card h4 i {
+            color: var(--primary-color);
+        }
+
+        /* Modern Typography blockquote */
+        blockquote.quote {
+            padding: 30px 40px;
+            background: #f9f9f9;
+            border-left: 6px solid var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #555;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        blockquote.quote::before {
+            content: '\201C';
+            position: absolute;
+            font-size: 5rem;
+            color: rgba(46, 139, 87, 0.1);
+            top: -10px;
+            left: 20px;
+            font-family: sans-serif;
+        }
+
+        @media (max-width: 900px) {
+            .editorial-row, .editorial-row:nth-child(even) { flex-direction: column; }
+            .info-highlight { grid-template-columns: 1fr; }
+            .content-grid-3 { grid-template-columns: 1fr; }
+            .canter-hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91-9876543210</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="active">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html" class="active">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Canter Safari Hero -->
+    <header class="canter-hero">
+        <div class="container">
+            <h1 class="playfair">Canter Safari Adventure</h1>
+            <p>Experience the rare thrill of Dhikala's wildlife in a shared open-roof journey.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Content Area -->
+    <section class="content-box">
+        <div class="container">
+            
+            <p class="intro-lead">
+                A Canter Safari in Jim Corbett National Park is the most economical and exciting way to explore the world-famous Dhikala zone. Ride through dense forests, golden grasslands, and dried riverbeds in a 16-seater open bus and witness the raw beauty of nature. Whether you're a wildlife enthusiast or traveling in a large group, a canter safari offers an unforgettable jungle experience.
+            </p>
+
+            <div class="editorial-row">
+                <div class="editorial-text">
+                    <h2 class="playfair">What is Canter Safari? 🌿</h2>
+                    <p>Canter Safari is a guided wildlife tour conducted in an open 16-seater bus, operated strictly by the forest department.</p>
+                    <p>It allows day-visitors to explore the deep forest areas of the Dhikala zone—the core area famous for the highest tiger density—which is otherwise inaccessible for non-staying guests.</p>
+                    <p>Unlike jeep safari, canter safari is a highly structured group experience. It is less private but extremely budget-friendly and arguably the absolute best way for non-residential tourists to access the legendary Dhikala grasslands.</p>
+                </div>
+                <div class="editorial-image">
+                    <img src="safari-jeep.jpg" alt="Canter Safari in deep forest">
+                </div>
+            </div>
+
+            <div class="editorial-row">
+                <div class="editorial-text">
+                    <h2 class="playfair">Why Choose Canter Safari? 🐅</h2>
+                    <p>The elevated seating of the canter bus provides a unique vantage point for spotting wildlife in tall grasses. Here's why it's a popular choice:</p>
+                    
+                    <ul class="stylish-list">
+                        <li>
+                            <i class="fa-solid fa-eye"></i>
+                            <strong>Dhikala Zone Access</strong>
+                            The only way for day-visitors to explore the iconic core Dhikala zone.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-users"></i>
+                            <strong>Ideal for Groups</strong>
+                            Perfect for large extended families, corporate groups, and budget travelers.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-camera"></i>
+                            <strong>Elevated Photography</strong>
+                            The height of the canter offers an excellent top-down angle for capturing stunning wildlife photography over the high grass.
+                        </li>
+                    </ul>
+                </div>
+                <div class="editorial-image">
+                    <img src="tigerimg.jpg" alt="Tiger spotted on Safari">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-box alt-bg">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h4 class="section-subtitle">Exclusive Habitat</h4>
+                <h2 class="section-title playfair">Safari Zones Covered 🌍</h2>
+                <p>Canter Safari is exclusively designed to navigate the vast expanses of the world-renowned Dhikala zone.</p>
+            </div>
+
+            <blockquote class="quote">
+                "Dhikala is the beating heart of Corbett. Its vast 'Chaur' (grasslands) and the Ramganga reservoir make it the ultimate haven for the Bengal Tiger."
+            </blockquote>
+
+            <div class="content-grid-3" style="margin-top: 30px;">
+                <div>
+                    <h3 class="playfair" style="font-size: 1.6rem; color: #222; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 15px;">Dhikala Zone</h3>
+                    <p style="font-size: 1.1rem;">The most iconic and famous zone. Loved for its massive grasslands and exceptionally high tiger sighting percentages.</p>
+                </div>
+                <div>
+                    <h3 class="playfair" style="font-size: 1.6rem; color: #222; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 15px;">Wildlife Spotting</h3>
+                    <p style="font-size: 1.1rem;">Known not just for tigers, but for massive herds of Asian Elephants, diverse deer species, and crocodiles by the riverbed.</p>
+                </div>
+                <div>
+                    <h3 class="playfair" style="font-size: 1.6rem; color: #222; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 15px;">Best Time To Visit 🌄</h3>
+                    <p style="font-size: 1.1rem;"><strong>Nov to June:</strong> Dhikala is open.<br><strong>March to June:</strong> Best chances to spot tigers.<br><strong>Winter:</strong> Pleasant, great bird watching.</p>
+                </div>
+            </div>
+
+            <!-- Large Info Banner for Time and Price -->
+            <div class="info-highlight">
+                <div class="info-highlight-part">
+                    <h3><i class="fa-regular fa-clock" style="font-size: 2rem; margin-right: 15px;"></i> Safari Timings</h3>
+                    <p>Canter Safari operates precisely in two major shifts daily starting from Ramnagar. Timing slightly varies based on season.</p>
+                    <div style="margin-top: 30px;">
+                        <div style="font-size: 1.4rem; font-weight: 600; font-family: 'Outfit'; margin-bottom: 10px;"><span style="color: #e8b059;">Morning:</span> 6:00 AM – 11:30 AM</div>
+                        <div style="font-size: 1.4rem; font-weight: 600; font-family: 'Outfit';"><span style="color: #e8b059;">Evening:</span> 12:00 PM – 5:30 PM</div>
+                    </div>
+                </div>
+                <div class="info-highlight-part">
+                    <h3><i class="fa-solid fa-tags" style="font-size: 2rem; margin-right: 15px;"></i> Canter Safari Price</h3>
+                    <p>The shared seating model makes Canter the most budget-friendly way to see the deep core zone.</p>
+                    <div class="price-badge">₹1,500 – ₹2,500</div>
+                    <p style="margin-top: 15px; font-size: 1rem; font-style: italic;">*Price is per seat. Includes official forest permit, guide fees, and transport from Ramnagar.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Essential Booking Information -->
+    <section class="content-box">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 class="playfair" style="font-size: 2.5rem; color: #111;">Essential Booking Information 📝</h2>
+                <p style="font-size: 1.2rem;">Everything you need to know before securing your permit.</p>
+            </div>
+
+            <div class="content-grid-3">
+                <div class="outline-card">
+                    <h4><i class="fa-regular fa-id-card"></i> Required Documents</h4>
+                    <p>You must have proper documentation to enter the forest reserve:</p>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li><strong>Valid Government ID:</strong> Aadhar Card, Passport, or Driving License.</li>
+                        <li><strong>Visitor Details:</strong> Accurate Name, age, and gender of all joining members.</li>
+                    </ul>
+                </div>
+                
+                <div class="outline-card">
+                    <h4><i class="fa-solid fa-laptop-medical"></i> How to Book?</h4>
+                    <p>Booking procedures are strictly regulated:</p>
+                    <ol style="padding-left: 20px; line-height: 2;">
+                        <li>Select Dhikala zone & preferred time (AM/PM).</li>
+                        <li>Provide ID details online.</li>
+                        <li>Make full advance payment.</li>
+                        <li>Receive official confirmation slip.</li>
+                    </ol>
+                </div>
+
+                <div class="outline-card" style="border-color: #f5b7b1; background-color: #fdf2f2;">
+                    <h4><i class="fa-solid fa-triangle-exclamation" style="color: #e74c3c;"></i> Important Guidelines</h4>
+                    <ul style="padding-left: 20px; line-height: 2; color: #c0392b;">
+                        <li>Always follow the guide's instructions.</li>
+                        <li><strong>Do not ever</strong> get down from the canter bus.</li>
+                        <li>Maintain total silence in the forest.</li>
+                        <li>Avoid plastic. Respect the wilderness.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pre Footer / Call To Action -->
+    <section class="cta-section" id="book-safari" style="padding: 100px 0; display:flex; align-items:center;">
+        <div class="cta-overlay" style="background: rgba(10, 25, 15, 0.85);"></div>
+        <div class="container cta-content text-center">
+            <h4 class="outfit" style="color: #e8b059; margin-bottom: 10px; font-weight: 500; font-size: 1.3rem; letter-spacing: 2px;">YOUR ADVENTURE BEGINS NOW</h4>
+            <h2 class="playfair" style="margin-bottom: 25px; font-size: 4rem;">Book Your Canter Safari Today 📞</h2>
+            <p style="margin-bottom: 40px; font-size: 1.3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">Contact our expert team directly to ensure you get guaranteed seats for the Dhikala canter safari on your selected dates.</p>
+            <div class="cta-buttons">
+                <a href="#book-safari" class="btn-primary large" style="font-size: 1.2rem; padding: 15px 40px;">Request A Booking</a>
+                <a href="https://wa.me/919876543210" class="btn-whatsapp large" style="font-size: 1.2rem; padding: 15px 40px;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: #fff;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Park</a></li>
+                        <li><a href="#">Safari Booking</a></li>
+                        <li><a href="#">Zones Overview</a></li>
+                        <li><a href="#">Tour Packages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="#">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9876543210</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+

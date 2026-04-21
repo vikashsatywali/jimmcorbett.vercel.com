@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Time to Visit Jim Corbett National Park | Seasons, Weather & Packing Guide</title>
+    <meta name="description" content="Discover the best time to visit Jim Corbett National Park. Explore our complete seasonal guide, month-by-month breakdown, what to pack, and FAQs.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('best-time.jpg') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .season-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .season-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .season-card-large {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            padding: 30px;
+            border-top: 4px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        .season-card-large:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .season-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .season-header i {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+        .season-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+        .season-subtitle-text {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .details-list {
+            margin-bottom: 20px;
+        }
+        .details-list li {
+            margin-bottom: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .details-list i {
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
+
+        .recommend-badge {
+            background: rgba(212, 163, 115, 0.1);
+            color: var(--primary-color);
+            padding: 12px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .goal-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .goal-table th, .goal-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .goal-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .goal-table tr:hover {
+            background-color: var(--bg-light);
+        }
+
+        .zone-info-card {
+            background: var(--primary-light);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .zone-info-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        .zone-info-list li:last-child {
+            border-bottom: none;
+        }
+        .zone-info-list strong {
+            color: var(--accent-color);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline-item {
+            padding: 20px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .timeline-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            background: var(--bg-light);
+            margin: 0;
+        }
+        .faq-answer {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+
+        .packing-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+        .packing-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91-9876543210</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html" class="active">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="index.html#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h1>Best Time to Visit</h1>
+            <p>Seasons, Weather & Complete Travel Guide</p>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h4 class="section-subtitle">Plan The Perfect Trip</h4>
+            <h2 class="section-title">A Yearly Breakdown</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Planning the perfect trip to Jim Corbett National Park depends on what kind of experience you are looking for. Whether you want to spot the majestic Royal Bengal Tiger, enjoy bird watching, or simply explore nature, every season offers something absolutely unique.</p>
+            <p style="max-width: 800px; margin: 15px auto 0;">Jim Corbett remains open for most of the year, but different zones operate in different seasons. Understanding the seasonal variations will help you plan the best safari experience.</p>
+        </div>
+    </section>
+
+    <!-- Seasonal Variations -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h4 class="section-subtitle">The Three Seasons</h4>
+                <h2 class="section-title">Weather & Wildlife Vibes</h2>
+            </div>
+            <div class="season-grid">
+                <!-- Summer -->
+                <div class="season-card-large">
+                    <div class="season-header">
+                        <i class="fa-solid fa-sun" style="color: #f39c12;"></i>
+                        <h3>Summer Season</h3>
+                    </div>
+                    <span class="season-subtitle-text">March – June</span>
+                    <p style="font-size: 0.95rem;">As the summer heat sets in, the dense vegetation begins to dry out, making the jungle beautifully transparent. Driven by the intense heat, majestic animals frequently gather around the few remaining water sources. This makes summer the undisputed best season for spotting the elusive Royal Bengal Tiger.</p>
+                    
+                    <h5 style="margin-top: 20px; margin-bottom: 10px;"><i class="fa-solid fa-temperature-half" style="color: var(--accent-color);"></i> Weather Info</h5>
+                    <ul class="details-list">
+                        <li><i class="fa-solid fa-check"></i> <span>25°C to 40°C temperature</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>Dry and warm climate</span></li>
+                    </ul>
+
+                    <div class="recommend-badge mt-20">
+                        <i class="fa-solid fa-camera"></i> Recommended for: Photographers & Tiger Spotting
+                    </div>
+                </div>
+
+                <!-- Winter -->
+                <div class="season-card-large">
+                    <div class="season-header">
+                        <i class="fa-solid fa-snowflake" style="color: #3498db;"></i>
+                        <h3>Winter Season</h3>
+                    </div>
+                    <span class="season-subtitle-text">November – February</span>
+                    <p style="font-size: 0.95rem;">Winter casts a magical, misty spell over Jim Corbett. The crisp, cool air and fog-laden mornings create a breathtaking backdrop for jeeps venturing into the woods. Winter is exceptionally famous for comfortable all-day safaris and the arrival of thousands of unique migratory birds from across the globe.</p>
+                    
+                    <h5 style="margin-top: 20px; margin-bottom: 10px;"><i class="fa-solid fa-temperature-empty" style="color: var(--accent-color);"></i> Weather Info</h5>
+                    <ul class="details-list">
+                        <li><i class="fa-solid fa-check"></i> <span>5°C to 25°C temperature</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>Cool and pleasant climate</span></li>
+                    </ul>
+
+                    <div class="recommend-badge mt-20">
+                        <i class="fa-solid fa-users"></i> Recommended for: Families & Bird Watchers
+                    </div>
+                </div>
+
+                <!-- Monsoon -->
+                <div class="season-card-large">
+                    <div class="season-header">
+                        <i class="fa-solid fa-cloud-showers-heavy" style="color: #2ecc71;"></i>
+                        <h3>Monsoon Season</h3>
+                    </div>
+                    <span class="season-subtitle-text">July – September</span>
+                    <p style="font-size: 0.95rem;">Monsoon breathes new life into the forests. Rains wash the dust away, unravelling a lush, vibrant green canopy and turning dry riverbeds into rushing streams. While dense core zones are closed, the buffer zones remain open and offer an incredibly peaceful, off-beat experience away from massive crowds.</p>
+                    
+                    <h5 style="margin-top: 20px; margin-bottom: 10px;"><i class="fa-solid fa-droplet" style="color: var(--accent-color);"></i> Weather Info</h5>
+                    <ul class="details-list">
+                        <li><i class="fa-solid fa-check"></i> <span>Moderate to heavy rainfall</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>Humid and wet conditions</span></li>
+                    </ul>
+
+                    <div class="recommend-badge mt-20">
+                        <i class="fa-solid fa-tree"></i> Recommended for: Peace Seekers & Nature Lovers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Month by Month Guide (NEW SECTION) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h4 class="section-subtitle">Deep Dive</h4>
+                <h2 class="section-title">Month-by-Month Guide</h2>
+                <p>Curious about exactly what to expect in a particular month? Here is a quick breakdown.</p>
+            </div>
+            
+            <div class="timeline-container mt-40">
+                <div class="timeline-item">
+                    <h4>January & February</h4>
+                    <p>The coldest months. Pack heavy woolens. Perfect time for bird watching and enjoying a crisp, misty morning safari. Tiger sightings are good during the sunny afternoons.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>March & April</h4>
+                    <p>Springtime! The weather is absolutely perfect—not too hot and not too cold. The forest is vibrant, and wildlife starts moving frequently towards the river. A highly recommended window!</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>May & June</h4>
+                    <p>Peak summer. It can get very hot, but if your sole goal is spotting tigers, this is the time. Animals are constantly near waterholes. Carry light cottons and plenty of water.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>July, August & September</h4>
+                    <p>The monsoon period. Core zones (Dhikala, Bijrani) are closed. Sitabani, Jhirna, and Dhela remain open. Best for budget trips, romantic getaways, and taking in the breathtaking greenery.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>October & November</h4>
+                    <p>Post-monsoon freshness. The park begins to reopen fully. The weather is cool and breezy. The jungle is lush green, making it a fantastic time for landscape photography and comfortable safaris.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>December</h4>
+                    <p>The festive season. The park is highly crowded due to holidays, so advanced booking is absolutely mandatory. Experience chilling mornings and cozy bonfire nights at your resort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Pack (NEW SECTION) -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h4 class="section-subtitle">Be Prepared</h4>
+                <h2 class="section-title">What to Pack?</h2>
+                <p>Packing correctly can make or break your safari experience depending on the season.</p>
+            </div>
+            
+            <div class="season-grid mt-40">
+                <div class="packing-card">
+                    <i class="fa-solid fa-glasses"></i>
+                    <h3>Summer Packing</h3>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Light cotton clothing (earthy colors like brown/olive), sunglasses, strong sunblock, a wide-brimmed hat, and a reusable water bottle.</p>
+                </div>
+                <div class="packing-card">
+                    <i class="fa-solid fa-mitten"></i>
+                    <h3>Winter Packing</h3>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Layers are key! Heavy jackets, thermals, gloves, and beanies for the 6 AM safari. A light sweater for the daytime as the sun warms up.</p>
+                </div>
+                <div class="packing-card">
+                    <i class="fa-solid fa-umbrella"></i>
+                    <h3>Monsoon Packing</h3>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Waterproof jackets, sturdy trekking shoes, umbrellas, mosquito repellents, and sealed waterproof bags for your expensive cameras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Breakdowns Grid -->
+    <section class="section">
+        <div class="container content-grid">
+            <div>
+                <h4 class="section-subtitle">Your Travel Goal</h4>
+                <h2 class="section-title">Best Time Recommendations</h2>
+                <table class="goal-table">
+                    <thead>
+                        <tr>
+                            <th>Travel Purpose</th>
+                            <th>Best Time to Visit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tiger Spotting</strong></td>
+                            <td>March – June</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bird Watching</strong></td>
+                            <td>November – February</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pleasant Weather</strong></td>
+                            <td>November – February</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Budget Travel</strong></td>
+                            <td>Monsoon Season</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Photography</strong></td>
+                            <td>October – June</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h4 class="section-subtitle">Important Info</h4>
+                <h2 class="section-title">Zone-Wise Openings & Tips</h2>
+                <div class="zone-info-card">
+                    <h3 style="color: var(--white); margin-bottom: 15px;">When do zones open?</h3>
+                    <ul class="zone-info-list" style="margin-bottom: 20px;">
+                        <li><span>Dhikala Zone:</span> <strong>Mid-Nov to Mid-June</strong></li>
+                        <li><span>Bijrani Zone:</span> <strong>October to June</strong></li>
+                        <li><span>Durga Devi Zone:</span> <strong>November to June</strong></li>
+                        <li><span>Jhirna & Dhela:</span> <strong>Open Year Round</strong></li>
+                    </ul>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; font-style: italic; margin: 0;"><i class="fa-solid fa-triangle-exclamation"></i> Always check real-time availability before booking your safari.</p>
+                </div>
+
+                <div style="background: var(--bg-light); padding: 25px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <h4 style="margin-bottom: 15px;"><i class="fa-solid fa-lightbulb" style="color: var(--accent-color);"></i> Pro Travel Tips</h4>
+                    <ul class="details-list" style="margin: 0;">
+                        <li><i class="fa-solid fa-arrow-right"></i> <span>Book your safari at least 15–30 days in advance</span></li>
+                        <li><i class="fa-solid fa-arrow-right"></i> <span>Choose an early morning safari for better wildlife sightings</span></li>
+                        <li><i class="fa-solid fa-arrow-right"></i> <span>Always carry original valid ID proof for entry</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section (NEW SECTION) -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h4 class="section-subtitle">Got Questions?</h4>
+                <h2 class="section-title">FAQs on Best Time to Visit</h2>
+            </div>
+            
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h3 class="faq-question">Are tigers visible during the winter season? <i class="fa-solid fa-plus"></i></h3>
+                    <div class="faq-answer">Yes! While summer has slightly higher probability due to animals gathering near waterbases, tigers are visible all year round. In winter, they often come out to sunbathe on rocks or open roads during the afternoon.</div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Is it completely closed in Monsoon? <i class="fa-solid fa-plus"></i></h3>
+                    <div class="faq-answer">No, Corbett is not completely closed. Core zones like Dhikala close for safety, but beautiful buffer eco-tourism zones like Jhirna and Dhela remain open 365 days a year for safaris.</div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Which is the best zone for first-timers? <i class="fa-solid fa-plus"></i></h3>
+                    <div class="faq-answer">Dhikala is the most famous for its stunning landscapes, followed closely by Bijrani which boasts a very healthy tiger population. Both are highly recommended for first-time visitors between November and June.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="padding: 80px 0;">
+        <div class="cta-overlay"></div>
+        <div class="container cta-content text-center">
+            <h4 class="section-subtitle" style="color: var(--accent-color);">Ready to Explore?</h4>
+            <h2 style="font-family: var(--font-body); font-size: 2rem;">Plan Your Trip Now</h2>
+            <p style="max-width: 800px; margin: 0 auto 30px;">Make the most of your visit to Jim Corbett National Park by choosing the right season. Book your safari, hotel, and travel services in advance for a hassle-free experience.</p>
+            
+            <div class="cta-buttons">
+                <a href="index.html#safari" class="btn-primary large">Start Planning Today <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: var(--white);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer Content Truncated for Space (Already Present in Previous Updates) -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Park</a></li>
+                        <li><a href="index.html#safari">Safari Booking</a></li>
+                        <li><a href="index.html#zones">Zones Overview</a></li>
+                        <li><a href="package.html">Tour Packages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="best-time.html">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="index.html#things-to-do">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9876543210</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

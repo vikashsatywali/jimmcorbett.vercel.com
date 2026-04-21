@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jim Corbett Packages | Luxury Safari & Stay</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore exclusive Jim Corbett Tour Packages. From Weekend Wildlife Retreats to Luxury Honeymoons, get the best deals on complete stay and safari packages.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Editorial Typography & Base Styles */
+        body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Hero Section */
+        .package-hero {
+            background-image: linear-gradient(to bottom, rgba(22, 58, 38, 0.7), rgba(0, 0, 0, 0.5)), url('luxury.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 8px solid #e8b059;
+        }
+
+        .package-hero h1 {
+            color: #fff;
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .package-hero p {
+            color: #f1f1f1;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Packages Grid Layout */
+        .packages-container {
+            padding: 80px 0;
+            background: #f9fbf9;
+        }
+
+        .pkg-grid-large {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .adv-pkg-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid #eaeaea;
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .adv-pkg-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(232, 176, 89, 0.15);
+        }
+
+        .adv-pkg-img {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .adv-pkg-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .adv-pkg-card:hover .adv-pkg-img img {
+            transform: scale(1.1);
+        }
+
+        .adv-pkg-duration {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #e8b059;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .adv-pkg-price {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #e8b059;
+            color: #111;
+            padding: 8px 18px;
+            border-radius: 10px 0 0 0;
+            font-weight: 800;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .adv-pkg-content {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .adv-pkg-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #163a26;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .adv-pkg-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+
+        .adv-pkg-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .adv-pkg-features li i {
+            color: #e8b059;
+            margin-top: 5px;
+        }
+
+        .adv-pkg-footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .btn-book-pkg {
+            flex: 1;
+            background: #163a26;
+            color: #fff;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .btn-book-pkg:hover {
+            background: #e8b059;
+            color: #111;
+        }
+
+        /* Banner CTA */
+        .custom-cta {
+            background: #111;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .custom-cta h2 {
+            font-size: 3rem;
+            color: #e8b059;
+            margin-bottom: 20px;
+        }
+
+        .custom-cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 991px) {
+            .pkg-grid-large {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .package-hero h1 {
+                font-size: 3rem;
+            }
+
+            .pkg-grid-large {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91-9876543210</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html" class="active">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Package Hero -->
+    <header class="package-hero">
+        <div class="container">
+            <h1 class="playfair">Exclusive Tour Packages</h1>
+            <p>From thrilling wildlife encounters to incredibly romantic luxurious escapes.<br>Find your perfect Jim
+                Corbett experience.</p>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section class="packages-container">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h4 class="section-subtitle">Curated For You</h4>
+                <h2 class="section-title playfair" style="font-size: 3.2rem;">Our Best Selling Packages 🌿</h2>
+                <p style="max-width: 700px; margin: 15px auto 0; font-size: 1.1rem; color: #666;">Each package is
+                    thoughtfully crafted to offer you the most premium, hassle-free and immersive wildlife journey
+                    possible.</p>
+            </div>
+
+            <div class="pkg-grid-large">
+                <!-- Package 1 -->
+                <div class="adv-pkg-card">
+                    <div class="adv-pkg-img">
+                        <img src="wildlife.jpg" alt="Weekend Retreat">
+                        <span class="adv-pkg-duration"><i class="fa-regular fa-clock"></i> 1N / 2D</span>
+                        <div class="adv-pkg-price">₹4,999 / Person</div>
+                    </div>
+                    <div class="adv-pkg-content">
+                        <h3>Weekend Wildlife Retreat</h3>
+                        <ul class="adv-pkg-features">
+                            <li><i class="fa-solid fa-check"></i> Welcoming Mocktail / Drink on arrival</li>
+                            <li><i class="fa-solid fa-check"></i> 1 Premium Jeep Safari included</li>
+                            <li><i class="fa-solid fa-check"></i> 1 Night Stay in a Luxury 4-Star Resort</li>
+                            <li><i class="fa-solid fa-check"></i> Buffet Breakfast, Lunch & Dinner</li>
+                        </ul>
+                        <div class="adv-pkg-footer">
+                            <a href="#book" class="btn-book-pkg">Book Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="adv-pkg-card">
+                    <div class="adv-pkg-img">
+                        <img src="family-tour.jpg" alt="Family Safari">
+                        <span class="adv-pkg-duration"><i class="fa-regular fa-clock"></i> 2N / 3D</span>
+                        <div class="adv-pkg-price">₹12,500 / Person</div>
+                    </div>
+                    <div class="adv-pkg-content">
+                        <h3>Family Safari Expedition</h3>
+                        <ul class="adv-pkg-features">
+                            <li><i class="fa-solid fa-check"></i> Complete guided nature walk for family</li>
+                            <li><i class="fa-solid fa-check"></i> 2 Separate Jeep Safaris in distinct zones</li>
+                            <li><i class="fa-solid fa-check"></i> 2 Nights Stay in Family Suite</li>
+                            <li><i class="fa-solid fa-check"></i> Evening bonfire with wildlife storytelling</li>
+                        </ul>
+                        <div class="adv-pkg-footer">
+                            <a href="#book" class="btn-book-pkg">Book Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="adv-pkg-card">
+                    <div class="adv-pkg-img">
+                        <img src="honeymoon.jpg" alt="Jungle Honeymoon">
+                        <span class="adv-pkg-duration"><i class="fa-regular fa-clock"></i> 3N / 4D</span>
+                        <div class="adv-pkg-price">₹18,999 / Couple</div>
+                    </div>
+                    <div class="adv-pkg-content">
+                        <h3>Jungle Honeymoon Escape</h3>
+                        <ul class="adv-pkg-features">
+                            <li><i class="fa-solid fa-check"></i> Floral bed decoration & specialized cake</li>
+                            <li><i class="fa-solid fa-check"></i> Exclusive private Jeep Safari</li>
+                            <li><i class="fa-solid fa-check"></i> 3 Nights stay in Premium Private Villa</li>
+                            <li><i class="fa-solid fa-check"></i> Romantic candlelight dinner by poolside</li>
+                        </ul>
+                        <div class="adv-pkg-footer">
+                            <a href="#book" class="btn-book-pkg">Book Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4 -->
+                <div class="adv-pkg-card">
+                    <div class="adv-pkg-img">
+                        <img src="tigersfari.png" alt="Photography Special">
+                        <span class="adv-pkg-duration"><i class="fa-regular fa-clock"></i> 3N / 4D</span>
+                        <div class="adv-pkg-price">₹22,000 / Person</div>
+                    </div>
+                    <div class="adv-pkg-content">
+                        <h3>Photography Special Tour</h3>
+                        <ul class="adv-pkg-features">
+                            <li><i class="fa-solid fa-check"></i> Assisted framing by experienced naturalist</li>
+                            <li><i class="fa-solid fa-check"></i> Full-day Safari across Bijrani & Dhikala</li>
+                            <li><i class="fa-solid fa-check"></i> Early morning tiger tracking</li>
+                            <li><i class="fa-solid fa-check"></i> Premium Forest Rest House connectivity</li>
+                        </ul>
+                        <div class="adv-pkg-footer">
+                            <a href="#book" class="btn-book-pkg">Book Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 5 -->
+                <div class="adv-pkg-card">
+                    <div class="adv-pkg-img">
+                        <img src="taj-corbett.avif" alt="Corporate Retreat">
+                        <span class="adv-pkg-duration"><i class="fa-regular fa-clock"></i> 2N / 3D</span>
+                        <div class="adv-pkg-price">Custom Pricing</div>
+                    </div>
+                    <div class="adv-pkg-content">
+                        <h3>Corporate & Group Retreat</h3>
+                        <ul class="adv-pkg-features">
+                            <li><i class="fa-solid fa-check"></i> Fully structured team-building activities</li>
+                            <li><i class="fa-solid fa-check"></i> Private Canter Safaris for large groups</li>
+                            <li><i class="fa-solid fa-check"></i> Free access to Conference & Event Halls</li>
+                            <li><i class="fa-solid fa-check"></i> Customized buffet spread & DJ night</li>
+                        </ul>
+                        <div class="adv-pkg-footer">
+                            <a href="#book" class="btn-book-pkg">Book Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Package Configurator -->
+                <div class="adv-pkg-card" style="background: #163a26; color: #fff; border: none;">
+                    <div class="adv-pkg-content" style="justify-content: center; text-align: center; padding: 40px;">
+                        <i class="fa-solid fa-wand-magic-sparkles"
+                            style="font-size: 3rem; color: #e8b059; margin-bottom: 20px;"></i>
+                        <h3 style="color: #fff;">Need a Custom Itinerary?</h3>
+                        <p style="color: #c9dec9; margin-bottom: 25px; line-height: 1.6;">Build your own completely
+                            personalized schedule. Choose your safari duration, specific preferred zones, and resort
+                            tier.</p>
+                        <a href="https://wa.me/919876543210" class="btn-primary"
+                            style="background: #e8b059; color: #111; display: inline-block; padding: 12px 30px; border-radius: 8px; font-weight: 700;">Consult
+                            An Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="custom-cta" id="book">
+        <div class="container">
+            <h2 class="playfair">Ready For An Unforgettable Safari?</h2>
+            <p>Our dedicated travel assistants are waiting to help you completely organize your dream wildlife escape.
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="tel:+919876543210" class="btn-primary"
+                    style="background: #e8b059; color: #111; font-weight: 700; padding: 12px 35px; border-radius: 30px;"><i
+                        class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/919876543210" class="btn-primary"
+                    style="background: #25D366; color: #fff; font-weight: 700; padding: 12px 35px; border-radius: 30px;"><i
+                        class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave"
+        style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: #fff;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160"
+            style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white"
+                        style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i
+                                class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim
+                            <span
+                                style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium
+                        resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Park</a></li>
+                        <li><a href="#">Safari Booking</a></li>
+                        <li><a href="#">Zones Overview</a></li>
+                        <li><a href="#">Tour Packages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="#">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand,
+                                India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9876543210</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

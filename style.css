@@ -1503,9 +1503,36 @@ p {
 @media (max-width: 768px) {
 
     .nav-links,
-    .btn-primary {
+    .navbar .btn-primary {
         display: none;
-        /* Add mobile menu JS later if needed */
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .nav-links.active .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        padding-left: 20px;
+    }
+
+    .nav-links.active .dropdown.open .dropdown-menu {
+        display: block;
     }
 
     .burger-menu {

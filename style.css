@@ -1586,3 +1586,16 @@ img {
     -moz-user-drag: none;
     -o-user-drag: none;
 }
+
+/* Fix for inline grids on mobile across zone pages */
+@media (max-width: 900px) {
+    .content-grid-3 > div,
+    .content-grid-2 > div {
+        grid-column: 1 / -1 !important;
+    }
+    
+    /* Target the inner grid of Expert Travel Tips */
+    .outline-card > div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+    }
+}

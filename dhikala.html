@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhikala Zone | Jim Corbett National Park</title>
+    <meta name="description"
+        content="Explore Dhikala Zone, the largest and most popular zone of Jim Corbett National Park. Known for its vast grasslands, dense forests, and authentic jungle experience.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Editorial Typography & Base Styles */
+        body { font-size: 1.1rem; line-height: 1.8; color: #444; }
+        .playfair { font-family: 'Playfair Display', serif; }
+        .outfit { font-family: 'Outfit', sans-serif; }
+        
+        /* Hero Section */
+        .zone-hero {
+            background-image: linear-gradient(to right, rgba(0, 50, 20, 0.8), rgba(0, 0, 0, 0.4)), url('banner-zone4\ -\ Copy.png');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 8px solid var(--primary-color);
+        }
+
+        .zone-hero h1 {
+            color: #fff;
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .zone-hero p {
+            color: #f1f1f1;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Content Formatting */
+        .content-box {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .content-box.alt-bg {
+            background: #f9fbf9;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Large Intro Text */
+        .intro-lead {
+            font-size: 1.6rem;
+            font-family: 'Playfair Display', serif;
+            color: #222;
+            line-height: 1.8;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-lead::first-letter {
+            font-size: 4rem;
+            float: left;
+            margin-right: 15px;
+            line-height: 1;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Zig Zag Editorial Layout */
+        .editorial-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .editorial-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .editorial-text {
+            flex: 1;
+        }
+
+        .editorial-text h2 {
+            font-size: 2.8rem;
+            color: #111;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .editorial-text p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .editorial-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: -15px 15px 0px rgba(46, 139, 87, 0.1);
+        }
+
+        .editorial-row:nth-child(even) .editorial-image img {
+            box-shadow: 15px 15px 0px rgba(46, 139, 87, 0.1);
+        }
+
+        /* Stylish Lists */
+        .stylish-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .stylish-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+        }
+
+        .stylish-list li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            background: rgba(46, 139, 87, 0.1);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .stylish-list li strong {
+            display: block;
+            color: #222;
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Wide Information Banner */
+        .info-highlight {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #2e8b57;
+            color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .info-highlight-part {
+            padding: 50px;
+            position: relative;
+        }
+
+        .info-highlight-part:first-child {
+            background: #163a26;
+        }
+
+        .info-highlight-part h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #e8b059;
+        }
+
+        .info-highlight-part p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .info-highlight-part ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-highlight-part ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-highlight-part ul li i {
+            color: #e8b059;
+        }
+
+        /* Content Grid */
+        .content-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .content-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .outline-card {
+            border: 2px solid #eaeaea;
+            padding: 40px;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .outline-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #222;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .outline-card h4 i {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 900px) {
+            .editorial-row, .editorial-row:nth-child(even) { flex-direction: column; }
+            .info-highlight { grid-template-columns: 1fr; }
+            .content-grid-3, .content-grid-2 { grid-template-columns: 1fr; }
+            .zone-hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919456722521"><i class="fa-solid fa-phone"></i> +91-9456722521</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html" class="active">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Zone Hero -->
+    <header class="zone-hero">
+        <div class="container">
+            <h1 class="playfair">Dhikala Zone 🐅</h1>
+            <p>The Ultimate Wildlife Experience in Jim Corbett</p>
+        </div>
+    </header>
+
+    <!-- Detailed Content Area -->
+    <section class="content-box">
+        <div class="container">
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h4 class="section-subtitle">Overview 🌿</h4>
+            </div>
+            
+            <p class="intro-lead">
+                Dhikala Zone is the largest and most popular zone of Jim Corbett National Park. Known for its vast grasslands, dense forests, and proximity to the Ramganga River, Dhikala offers the most authentic and immersive jungle experience in India.
+            </p>
+            <p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 900px; margin: 0 auto 60px;">
+                It is the only zone where visitors can stay deep inside the forest, making it a top choice for wildlife enthusiasts, photographers, and adventure seekers.
+            </p>
+
+            <div class="editorial-row">
+                <div class="editorial-text">
+                    <h2 class="playfair">Why Choose Dhikala Zone? 🐯</h2>
+                    <p>Dhikala stands apart as the premier destination for a true wilderness experience. The combination of dense canopy, open grasslands, and abundant water sources creates the perfect habitat for a diverse range of wildlife.</p>
+                    
+                    <ul class="stylish-list">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Highest Probability of Spotting Tigers</strong>
+                            Known as the prime territory for the majestic Royal Bengal Tiger.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Expansive Grasslands (Chaurs)</strong>
+                            Ideal for unobstructed, wide-angle wildlife sightings.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Ramganga River Views</strong>
+                            Breathtaking scenic views and an active watering hole for wildlife.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Rich Biodiversity</strong>
+                            Abundant elephants, deer, crocodiles, and exotic bird species.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Exclusive Forest Stay</strong>
+                            The only zone offering night stays deep inside the core park area.
+                        </li>
+                    </ul>
+                </div>
+                <div class="editorial-image">
+                    <img src="tigerr.jpg" alt="Tiger in Dhikala">
+                </div>
+            </div>
+
+            <!-- Safari Experience -->
+            <div style="margin-top: 80px; text-align: center;">
+                <h2 class="section-title playfair">Safari Experience 🚙</h2>
+                <p style="font-size: 1.2rem;">A safari in Dhikala is not just a ride — it's a deep exploration of the wild.</p>
+            </div>
+
+            <div class="content-grid-2">
+                <div class="outline-card" style="border-top: 4px solid var(--primary-color);">
+                    <h4><i class="fa-solid fa-bus"></i> 1. Canter Safari</h4>
+                    <p style="font-size: 1.1rem; color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">🟢 Most Recommended for Day Visitors</p>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li>Open bus with 16–18 seats</li>
+                        <li>Highly budget-friendly option</li>
+                        <li>Operates on fixed routes and timings</li>
+                        <li>Ideal for groups and individual travelers</li>
+                    </ul>
+                </div>
+                
+                <div class="outline-card" style="border-top: 4px solid #e8b059;">
+                    <h4><i class="fa-solid fa-truck-monster"></i> 2. Jeep Safari</h4>
+                    <p style="font-size: 1.1rem; color: #e8b059; font-weight: 600; margin-bottom: 15px;">🟢 Limited Access</p>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li>Private, highly flexible experience</li>
+                        <li>Covers deeper, secluded forest areas</li>
+                        <li><strong>Note:</strong> Only available for guests staying inside the Dhikala Forest Lodge</li>
+                        <li>Requires advance booking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stay at Dhikala Forest Lodge -->
+            <div class="info-highlight">
+                <div class="info-highlight-part">
+                    <h3>Stay at Dhikala Forest Lodge 🏨</h3>
+                    <p>Dhikala Forest Lodge offers a rare and magical opportunity to stay inside the core forest area, waking up to the sounds of the jungle.</p>
+                    <ul style="margin-top: 20px;">
+                        <li><i class="fa-solid fa-tree"></i> Located amidst dense wilderness 🌲</li>
+                        <li><i class="fa-solid fa-binoculars"></i> Watchtower for wildlife observation 🐘</li>
+                        <li><i class="fa-solid fa-bed"></i> Simple yet highly comfortable accommodation</li>
+                        <li><i class="fa-solid fa-moon"></i> Unmatched authentic jungle atmosphere</li>
+                    </ul>
+                </div>
+                <div class="info-highlight-part" style="background: #e74c3c; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="color: #fff;"><i class="fa-solid fa-triangle-exclamation"></i> Important Note ⚠️</h3>
+                    <p style="font-size: 1.3rem; font-weight: 500;">Accommodation is extremely limited and must be booked well in advance (ideally 45-90 days prior to your visit).</p>
+                    <a href="#book-safari" class="btn-primary" style="align-self: flex-start; margin-top: 20px; background: #fff; color: #e74c3c;">Enquire Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Attractions and Information -->
+    <section class="content-box alt-bg">
+        <div class="container">
+            
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="section-title playfair">Major Attractions 🌅</h2>
+            </div>
+
+            <div class="content-grid-3">
+                <div class="outline-card" style="padding: 30px;">
+                    <h4>🌾 Dhikala Grasslands (Chaur)</h4>
+                    <p>A vast, stunning open landscape famous for frequent tiger and wild elephant sightings. It offers incredible photography opportunities.</p>
+                </div>
+                <div class="outline-card" style="padding: 30px;">
+                    <h4>🌊 Ramganga Reservoir</h4>
+                    <p>A major water source cutting through the zone, attracting a huge population of crocodiles, elephants, and migratory birds.</p>
+                </div>
+                <div class="outline-card" style="padding: 30px;">
+                    <h4>🦅 Bird Watching</h4>
+                    <p>Home to over 500 species of birds, making it a paradise for birders. Look out for the Crested Serpent Eagle, Kingfishers, and Woodpeckers.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Info Grid -->
+            <div class="content-grid-3" style="margin-top: 60px;">
+                
+                <!-- Best Time -->
+                <div class="outline-card">
+                    <h4>🗓️ Best Time to Visit</h4>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li><strong>Zone Open:</strong> 15 November to 15 June</li>
+                        <li><strong>Nov to Feb:</strong> Pleasant weather, great scenery</li>
+                        <li><strong>March to June:</strong> Best time for tiger sightings</li>
+                    </ul>
+                </div>
+
+                <!-- Location -->
+                <div class="outline-card">
+                    <h4>📍 Location & Access</h4>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li><strong>Nearest Town:</strong> Ramnagar</li>
+                        <li><strong>Entry Gate:</strong> Dhangarhi Gate</li>
+                        <li><strong>Distance:</strong> Approx. 30 km deep inside from Ramnagar</li>
+                    </ul>
+                </div>
+
+                <!-- Permits -->
+                <div class="outline-card">
+                    <h4>🎟️ Permits & Booking</h4>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li>Online booking is strictly mandatory</li>
+                        <li>Valid ID proof required for all visitors</li>
+                        <li>Limited daily entries to preserve nature</li>
+                        <li>Advance booking (30–45 days) recommended</li>
+                    </ul>
+                </div>
+
+                <!-- Guidelines -->
+                <div class="outline-card" style="border-color: #f5b7b1; background-color: #fdf2f2;">
+                    <h4 style="color: #c0392b;">⚠️ Visitor Guidelines</h4>
+                    <ul style="padding-left: 0; list-style: none; line-height: 2; color: #c0392b;">
+                        <li><i class="fa-solid fa-xmark"></i> Plastic items are completely prohibited</li>
+                        <li><i class="fa-solid fa-xmark"></i> Loud noise and music are not allowed</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary-color);"></i> Follow instructions of forest guides</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary-color);"></i> Carry valid ID at all times</li>
+                    </ul>
+                </div>
+
+                <!-- Travel Tips -->
+                <div class="outline-card" style="grid-column: span 2; background-color: #f4f9f4; border-color: #d6e8d6;">
+                    <h4 style="color: var(--primary-color);">💡 Expert Travel Tips</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <ul style="padding-left: 20px; line-height: 2;">
+                            <li>Choose early morning safaris for significantly better wildlife sightings.</li>
+                            <li>Wear neutral-colored clothing (green, brown, beige) to blend in.</li>
+                        </ul>
+                        <ul style="padding-left: 20px; line-height: 2;">
+                            <li>Carry a good camera and binoculars 📸 for distant sightings.</li>
+                            <li>Maintain absolute silence to avoid disturbing the wildlife.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pre Footer / Call To Action -->
+    <section class="cta-section" id="book-safari" style="padding: 100px 0; display:flex; align-items:center;">
+        <div class="cta-overlay" style="background: rgba(10, 25, 15, 0.85);"></div>
+        <div class="container cta-content text-center">
+            <h4 class="outfit" style="color: #e8b059; margin-bottom: 10px; font-weight: 500; font-size: 1.3rem; letter-spacing: 2px;">✨ WHAT MAKES DHIKALA UNIQUE?</h4>
+            <h2 class="playfair" style="margin-bottom: 25px; font-size: 3rem;">The Soul of Corbett</h2>
+            <p style="margin-bottom: 40px; font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">Dhikala is not just a safari zone — it is the soul of Corbett. From thrilling tiger encounters to peaceful riverside views, it offers a complete wilderness experience that is unmatched anywhere else in India.</p>
+            
+            <hr style="border-color: rgba(255,255,255,0.2); margin-bottom: 40px; max-width: 200px; margin-left: auto; margin-right: auto;">
+            
+            <h2 class="playfair" style="margin-bottom: 25px; font-size: 3.5rem;">📞 Plan Your Dhikala Safari</h2>
+            <p style="margin-bottom: 40px; font-size: 1.3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">Whether you are a nature lover, wildlife photographer, or adventure traveler, Dhikala Zone promises an unforgettable journey into the wild. 👉 Book your safari today and explore the true beauty of Corbett!</p>
+            
+            <div class="cta-buttons">
+                <a href="#book-safari" class="btn-primary large" style="font-size: 1.2rem; padding: 15px 40px;">Request A Booking</a>
+                <a href="https://wa.me/919456722521" class="btn-whatsapp large" style="font-size: 1.2rem; padding: 15px 40px;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: #fff;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Park</a></li>
+                        <li><a href="#">Safari Booking</a></li>
+                        <li><a href="zones.html">Zones Overview</a></li>
+                        <li><a href="#">Tour Packages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="#">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9456722521</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="nav.js"></script>
+</body>
+
+</html>

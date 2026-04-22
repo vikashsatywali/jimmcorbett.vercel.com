@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhirna Zone | Jim Corbett National Park</title>
+    <meta name="description"
+        content="Explore Jhirna Zone, the year-round safari destination of Jim Corbett National Park. Famous for consistent wildlife movement, sloth bears, and tiger sightings.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Editorial Typography & Base Styles */
+        body { font-size: 1.1rem; line-height: 1.8; color: #444; }
+        .playfair { font-family: 'Playfair Display', serif; }
+        .outfit { font-family: 'Outfit', sans-serif; }
+        
+        /* Hero Section */
+        .zone-hero {
+            background-image: linear-gradient(to right, rgba(0, 50, 20, 0.8), rgba(0, 0, 0, 0.4)), url('banner-zone6\ -\ Copy.png');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 8px solid var(--primary-color);
+        }
+
+        .zone-hero h1 {
+            color: #fff;
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .zone-hero p {
+            color: #f1f1f1;
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Content Formatting */
+        .content-box {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .content-box.alt-bg {
+            background: #f9fbf9;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Large Intro Text */
+        .intro-lead {
+            font-size: 1.6rem;
+            font-family: 'Playfair Display', serif;
+            color: #222;
+            line-height: 1.8;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-lead::first-letter {
+            font-size: 4rem;
+            float: left;
+            margin-right: 15px;
+            line-height: 1;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Zig Zag Editorial Layout */
+        .editorial-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .editorial-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .editorial-text {
+            flex: 1;
+        }
+
+        .editorial-text h2 {
+            font-size: 2.8rem;
+            color: #111;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .editorial-text p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .editorial-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: -15px 15px 0px rgba(46, 139, 87, 0.1);
+        }
+
+        .editorial-row:nth-child(even) .editorial-image img {
+            box-shadow: 15px 15px 0px rgba(46, 139, 87, 0.1);
+        }
+
+        /* Stylish Lists */
+        .stylish-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .stylish-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+        }
+
+        .stylish-list li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            background: rgba(46, 139, 87, 0.1);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .stylish-list li strong {
+            display: block;
+            color: #222;
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Content Grid */
+        .content-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .content-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .outline-card {
+            border: 2px solid #eaeaea;
+            padding: 40px;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .outline-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #222;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .outline-card h4 i {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 900px) {
+            .editorial-row, .editorial-row:nth-child(even) { flex-direction: column; }
+            .content-grid-3, .content-grid-2 { grid-template-columns: 1fr; }
+            .zone-hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919456722521"><i class="fa-solid fa-phone"></i> +91-9456722521</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html" class="active">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Zone Hero -->
+    <header class="zone-hero">
+        <div class="container">
+            <h1 class="playfair">Jhirna Zone 🐅</h1>
+            <p>The Year-Round Safari Destination of Corbett</p>
+        </div>
+    </header>
+
+    <!-- Detailed Content Area -->
+    <section class="content-box">
+        <div class="container">
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h4 class="section-subtitle">Overview 🌿</h4>
+            </div>
+            
+            <p class="intro-lead">
+                Jhirna Zone is one of the most accessible and unique zones of Jim Corbett National Park. Located in the southern part of the park, Jhirna is famous for being open throughout the year, unlike most other zones.
+            </p>
+            <p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 900px; margin: 0 auto 60px;">
+                With its dry deciduous forests, open landscapes, and consistent wildlife movement, Jhirna offers a reliable safari experience in every season.
+            </p>
+
+            <div class="editorial-row">
+                <div class="editorial-text">
+                    <h2 class="playfair">Why Choose Jhirna Zone? 🐯</h2>
+                    <p>Unlike other zones that close during monsoons, Jhirna remains operational, offering nature lovers a chance to see the jungle in its most lush, vibrant state.</p>
+                    
+                    <ul class="stylish-list">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Open All Year Round</strong>
+                            Subject to extreme weather conditions, you can visit Jhirna anytime.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Frequent Sloth Bear Sightings</strong>
+                            The dry terrain provides great opportunities to see tigers and sloth bears.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Less Crowded</strong>
+                            Enjoy a more peaceful and immersive jungle experience away from the rush.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Ideal for Off-Season Visits</strong>
+                            The best choice for monsoon and late-summer wildlife trips.
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <strong>Rich Wildlife & Bird Variety</strong>
+                            A fantastic spot for birdwatchers and herbivore sightings.
+                        </li>
+                    </ul>
+                </div>
+                <div class="editorial-image">
+                    <img src="leapord2.jpg" alt="Beautiful Forest Landscape">
+                </div>
+            </div>
+
+            <!-- Safari Experience -->
+            <div style="margin-top: 80px; text-align: center;">
+                <h2 class="section-title playfair">Safari Experience 🚙</h2>
+                <p style="font-size: 1.2rem;">Jhirna Zone offers a smooth and enjoyable jeep safari experience through diverse forest terrain.</p>
+            </div>
+
+            <div class="content-grid-2" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="outline-card" style="border-top: 4px solid var(--primary-color); grid-column: span 2;">
+                    <h4><i class="fa-solid fa-truck-monster"></i> Jeep Safari</h4>
+                    <p style="font-size: 1.1rem; color: var(--primary-color); font-weight: 600; margin-bottom: 15px;">🟢 Main Option</p>
+                    <ul style="padding-left: 20px; line-height: 2; columns: 2;">
+                        <li>6 people per jeep</li>
+                        <li>Covers wide forest areas</li>
+                        <li>Morning and afternoon safari slots</li>
+                        <li>Great for wildlife photography</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Attractions and Information -->
+    <section class="content-box alt-bg">
+        <div class="container">
+            
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="section-title playfair">Major Attractions 🌅</h2>
+            </div>
+
+            <div class="content-grid-2">
+                <div class="outline-card" style="padding: 30px;">
+                    <h4>🌳 Dry Forest Landscape</h4>
+                    <p>Jhirna features a unique mix of dry deciduous forest and open grass patches, making wildlife tracking incredibly easier and more visible.</p>
+                </div>
+                <div class="outline-card" style="padding: 30px;">
+                    <h4>🐻 Sloth Bear Sightings</h4>
+                    <p>This zone is especially known and loved for frequent sloth bear sightings, an animal which is quite rare to spot in other zones.</p>
+                </div>
+            </div>
+            
+            <div class="content-grid-2" style="margin-top: 40px;">
+                <div class="outline-card" style="border-left: 4px solid #e8b059;">
+                    <h4>🐘 Wildlife Sightings</h4>
+                    <p>Animals commonly seen in the Jhirna Zone:</p>
+                    <ul style="padding-left: 20px; line-height: 2; margin-top: 10px;">
+                        <li>Royal Bengal Tiger 🐅</li>
+                        <li>Sloth Bear 🐻</li>
+                        <li>Wild Elephants 🐘</li>
+                        <li>Spotted Deer (Chital)</li>
+                        <li>Nilgai (Blue Bull) & Wild Boar</li>
+                    </ul>
+                </div>
+                <div class="outline-card" style="border-left: 4px solid var(--primary-color);">
+                    <h4>🦅 Bird Watching</h4>
+                    <p>Jhirna is home to a fantastic array of bird species such as:</p>
+                    <ul style="padding-left: 20px; line-height: 2; margin-top: 10px;">
+                        <li>Indian Roller</li>
+                        <li>Crested Serpent Eagle</li>
+                        <li>Peafowl (Peacock)</li>
+                        <li>Colorful Parakeets</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Detailed Info Grid -->
+            <div class="content-grid-3" style="margin-top: 60px;">
+                
+                <!-- Best Time -->
+                <div class="outline-card">
+                    <h4>🗓️ Best Time to Visit</h4>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li><strong>Zone Open:</strong> Throughout the year</li>
+                        <li><strong>Nov to Feb:</strong> Pleasant winter weather</li>
+                        <li><strong>March to June:</strong> Higher chances of tiger sightings</li>
+                    </ul>
+                </div>
+
+                <!-- Location -->
+                <div class="outline-card">
+                    <h4>📍 Location & Access</h4>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li><strong>Nearest Town:</strong> Ramnagar</li>
+                        <li><strong>Entry Gate:</strong> Dhela Gate</li>
+                        <li><strong>Distance:</strong> Approx. 15–20 km from Ramnagar</li>
+                    </ul>
+                </div>
+
+                <!-- Permits -->
+                <div class="outline-card">
+                    <h4>🎟️ Permits & Booking</h4>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li>Online booking strictly mandatory</li>
+                        <li>Limited jeep entries per day</li>
+                        <li>Valid ID proof required for check-in</li>
+                        <li>Advance booking recommended</li>
+                    </ul>
+                </div>
+
+                <!-- Guidelines -->
+                <div class="outline-card" style="border-color: #f5b7b1; background-color: #fdf2f2;">
+                    <h4 style="color: #c0392b;">⚠️ Visitor Guidelines</h4>
+                    <ul style="padding-left: 0; list-style: none; line-height: 2; color: #c0392b;">
+                        <li><i class="fa-solid fa-xmark"></i> No plastic items allowed</li>
+                        <li><i class="fa-solid fa-xmark"></i> Do not make loud noises</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary-color);"></i> Follow forest rules and guide instructions</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary-color);"></i> Respect wildlife and maintain distance</li>
+                    </ul>
+                </div>
+
+                <!-- Travel Tips -->
+                <div class="outline-card" style="grid-column: span 2; background-color: #f4f9f4; border-color: #d6e8d6;">
+                    <h4 style="color: var(--primary-color);">💡 Expert Travel Tips</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <ul style="padding-left: 20px; line-height: 2;">
+                            <li>Early morning safaris are the absolute best for wildlife sightings.</li>
+                            <li>Wear neutral-colored clothes (green, brown, beige) so you blend in.</li>
+                        </ul>
+                        <ul style="padding-left: 20px; line-height: 2;">
+                            <li>Carry binoculars and a good camera 📸 for optimal viewing.</li>
+                            <li>Avoid sudden movements or noise to prevent scaring animals.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pre Footer / Call To Action -->
+    <section class="cta-section" id="book-safari" style="padding: 100px 0; display:flex; align-items:center;">
+        <div class="cta-overlay" style="background: rgba(10, 25, 15, 0.85);"></div>
+        <div class="container cta-content text-center">
+            <h4 class="outfit" style="color: #e8b059; margin-bottom: 10px; font-weight: 500; font-size: 1.3rem; letter-spacing: 2px;">✨ WHAT MAKES JHIRNA UNIQUE?</h4>
+            <h2 class="playfair" style="margin-bottom: 25px; font-size: 3rem;">A Reliable Safari Destination</h2>
+            <p style="margin-bottom: 40px; font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">Jhirna Zone stands out because it is open all year, making it the perfect option when other zones are closed during monsoon. Its consistent wildlife sightings and peaceful environment make it a favorite among regular visitors.</p>
+            
+            <hr style="border-color: rgba(255,255,255,0.2); margin-bottom: 40px; max-width: 200px; margin-left: auto; margin-right: auto;">
+            
+            <h2 class="playfair" style="margin-bottom: 25px; font-size: 3.5rem;">📞 Plan Your Jhirna Safari</h2>
+            <p style="margin-bottom: 40px; font-size: 1.3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">If you’re looking for a flexible and reliable jungle safari experience, Jhirna Zone is the perfect choice. 👉 Book your safari today and explore Corbett anytime of the year!</p>
+            
+            <div class="cta-buttons">
+                <a href="#book-safari" class="btn-primary large" style="font-size: 1.2rem; padding: 15px 40px;">Request A Booking</a>
+                <a href="https://wa.me/919456722521" class="btn-whatsapp large" style="font-size: 1.2rem; padding: 15px 40px;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: #fff;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Park</a></li>
+                        <li><a href="#">Safari Booking</a></li>
+                        <li><a href="zones.html">Zones Overview</a></li>
+                        <li><a href="#">Tour Packages</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="#">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9456722521</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="nav.js"></script>
+</body>
+
+</html>

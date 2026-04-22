@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -34,7 +34,7 @@
 
         /* Hero Section */
         .resort-hero {
-            background-image: linear-gradient(to bottom, rgba(50, 40, 20, 0.7), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542314831-c6a4d14b8ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(to bottom, rgba(50, 40, 20, 0.7), rgba(0, 0, 0, 0.6)), url('luxuuryy.png');
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -126,32 +126,46 @@
             gap: 32px;
             margin-top: 50px;
         }
+
         .resort-listing-card {
             background: #fff;
             border-radius: 14px;
             overflow: hidden;
             border: 1px solid #eaeaea;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
             transition: all 0.35s ease;
             display: flex;
             flex-direction: column;
             text-decoration: none;
             color: inherit;
         }
+
         .resort-listing-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(232,176,89,0.18);
+            box-shadow: 0 20px 50px rgba(232, 176, 89, 0.18);
         }
+
         .resort-card-img {
             height: 220px;
             overflow: hidden;
             position: relative;
         }
-        .resort-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
-        .resort-listing-card:hover .resort-card-img img { transform: scale(1.08); }
+
+        .resort-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s ease;
+        }
+
+        .resort-listing-card:hover .resort-card-img img {
+            transform: scale(1.08);
+        }
+
         .resort-card-badge {
             position: absolute;
-            top: 14px; left: 14px;
+            top: 14px;
+            left: 14px;
             background: #163a26;
             color: #e8b059;
             font-size: 0.75rem;
@@ -161,9 +175,11 @@
             padding: 5px 12px;
             border-radius: 20px;
         }
+
         .resort-card-price-tag {
             position: absolute;
-            bottom: 0; right: 0;
+            bottom: 0;
+            right: 0;
             background: #e8b059;
             color: #fff;
             font-weight: 800;
@@ -172,18 +188,98 @@
             padding: 8px 16px;
             border-radius: 8px 0 0 0;
         }
-        .resort-card-body { padding: 22px 24px; flex: 1; display: flex; flex-direction: column; }
-        .resort-card-rating { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #f5a623; margin-bottom: 10px; }
-        .resort-card-rating span { color: #888; }
-        .resort-card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #111; margin-bottom: 6px; }
-        .resort-card-location { font-size: 0.85rem; color: #888; display: flex; align-items: center; gap: 6px; margin-bottom: 14px; }
-        .resort-card-location i { color: #e8b059; }
-        .resort-card-highlights { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-        .resort-highlight-tag { background: #f4f9f4; border: 1px solid #d6e8d6; color: #163a26; font-size: 0.77rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; display: flex; align-items: center; gap: 5px; }
-        .resort-highlight-tag i { font-size: 0.7rem; }
-        .resort-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid #eee; margin-top: auto; }
-        .resort-card-cta { background: #163a26; color: #fff; padding: 9px 20px; border-radius: 7px; font-size: 0.88rem; font-weight: 700; font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 7px; transition: all 0.3s; }
-        .resort-listing-card:hover .resort-card-cta { background: #e8b059; color: #fff; }
+
+        .resort-card-body {
+            padding: 22px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resort-card-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #f5a623;
+            margin-bottom: 10px;
+        }
+
+        .resort-card-rating span {
+            color: #888;
+        }
+
+        .resort-card-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        .resort-card-location {
+            font-size: 0.85rem;
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .resort-card-location i {
+            color: #e8b059;
+        }
+
+        .resort-card-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .resort-highlight-tag {
+            background: #f4f9f4;
+            border: 1px solid #d6e8d6;
+            color: #163a26;
+            font-size: 0.77rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .resort-highlight-tag i {
+            font-size: 0.7rem;
+        }
+
+        .resort-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+            margin-top: auto;
+        }
+
+        .resort-card-cta {
+            background: #163a26;
+            color: #fff;
+            padding: 9px 20px;
+            border-radius: 7px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.3s;
+        }
+
+        .resort-listing-card:hover .resort-card-cta {
+            background: #e8b059;
+            color: #fff;
+        }
 
         /* Room Cards Grid */
         .rooms-grid {
@@ -469,7 +565,8 @@
 
             <div style="text-align: center; margin-bottom: 40px; margin-top: 10px;">
                 <h4 class="section-subtitle" style="font-size: 1rem; letter-spacing: 3px;">Premium Escape</h4>
-                <h2 class="section-title playfair" style="font-size: 3rem; line-height: 1.2; margin-top: 5px;">Your Perfect Stay Awaits ðŸŒ¿</h2>
+                <h2 class="section-title playfair" style="font-size: 3rem; line-height: 1.2; margin-top: 5px;">Your
+                    Perfect Stay Awaits 🌿</h2>
             </div>
 
             <p class="intro-lead">
@@ -480,7 +577,7 @@
 
             <div class="editorial-row">
                 <div class="editorial-text">
-                    <h2 class="playfair">About Our Resorts ðŸŒ¿</h2>
+                    <h2 class="playfair">About Our Resorts 🌿</h2>
                     <p>Our carefully selected luxury resorts in Jim Corbett are elegantly designed to provide a
                         supremely peaceful escape from exhausting city life while keeping you intimately close to
                         untethered nature.</p>
@@ -491,7 +588,7 @@
                         offer curated options tailored for absolutely every type of traveler.</p>
                 </div>
                 <div class="editorial-image">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    <img src="luxury.jpg"
                         alt="Luxury Resort Pool">
                 </div>
             </div>
@@ -499,69 +596,81 @@
         </div>
     </section>
 
-    <!-- â”€â”€â”€ Handpicked Resorts Grid â”€â”€â”€ -->
-    <section class="content-box" style="background: #f9fbf9; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+    <!-- ─── Handpicked Resorts Grid ─── -->
+    <section class="content-box"
+        style="background: #f9fbf9; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 10px;">
                 <h4 class="section-subtitle">Handpicked For You</h4>
-                <h2 class="section-title playfair" style="font-size: 3.2rem;">Recommended Resorts ðŸ•ï¸</h2>
-                <p style="max-width: 700px; margin: 10px auto 0; color: #888; font-size: 1rem;">Browse our verified collection of luxury resorts near Jim Corbett. Each one is personally checked for quality, comfort, and proximity to safari zones.</p>
+                <h2 class="section-title playfair" style="font-size: 3.2rem;">Recommended Resorts 🏨</h2>
+                <p style="max-width: 700px; margin: 10px auto 0; color: #888; font-size: 1rem;">Browse our verified
+                    collection of luxury resorts near Jim Corbett. Each one is personally checked for quality, comfort,
+                    and proximity to safari zones.</p>
             </div>
             <div class="resort-cards-grid">
                 <!-- Card 1 -->
-                <a href="resort-inner.html" class="resort-listing-card">
+                <div class="resort-listing-card">
                     <div class="resort-card-img">
-                        <img src="https://images.unsplash.com/photo-1542314831-c6a4d14b8ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Resort">
-                        <span class="resort-card-badge">â­ Top Rated</span>
-                        <span class="resort-card-price-tag">From â‚¹4,500/night</span>
+                        <img src="OIP.webp"
+                            alt="Resort">
+                        <span class="resort-card-badge">⭐ Top Rated</span>
+                        <span class="resort-card-price-tag">From ₹4,500/night</span>
                     </div>
                     <div class="resort-card-body">
-                        <div class="resort-card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><strong style="color:#333;">4.8</strong></div>
+                        <div class="resort-card-rating"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><strong
+                                style="color:#333;">4.8</strong></div>
                         <h3>The Corbett Wilderness Retreat</h3>
                         <div class="resort-card-location"><i class="fa-solid fa-location-dot"></i> Dhikala Zone</div>
-                        <div class="resort-card-highlights">
+                        <div class="resort-card-highlights" style="margin-bottom: 0;">
                             <span class="resort-highlight-tag">Pool</span>
                             <span class="resort-highlight-tag">Spa</span>
                         </div>
-                        <div class="resort-card-footer"><span class="resort-card-cta">View Details <i class="fa-solid fa-arrow-right"></i></span></div>
                     </div>
-                </a>
+                </div>
                 <!-- Card 2 -->
-                <a href="resort-inner.html" class="resort-listing-card">
+                <div class="resort-listing-card">
                     <div class="resort-card-img">
-                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Resort">
-                        <span class="resort-card-badge">ðŸŒ¿ Budget Friendly</span>
-                        <span class="resort-card-price-tag">From â‚¹3,800/night</span>
+                        <img src="bijranire.webp"
+                            alt="Resort">
+                        <span class="resort-card-badge">🌿 Budget Friendly</span>
+                        <span class="resort-card-price-tag">From ₹3,800/night</span>
                     </div>
                     <div class="resort-card-body">
-                        <div class="resort-card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><strong style="color:#333;">4.3</strong></div>
+                        <div class="resort-card-rating"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><strong
+                                style="color:#333;">4.3</strong></div>
                         <h3>Bijrani Jungle Lodge</h3>
                         <div class="resort-card-location"><i class="fa-solid fa-location-dot"></i> Bijrani Zone</div>
-                        <div class="resort-card-highlights">
+                        <div class="resort-card-highlights" style="margin-bottom: 0;">
                             <span class="resort-highlight-tag">Bonfire</span>
                             <span class="resort-highlight-tag">Nature</span>
                         </div>
-                        <div class="resort-card-footer"><span class="resort-card-cta">View Details <i class="fa-solid fa-arrow-right"></i></span></div>
                     </div>
-                </a>
+                </div>
                 <!-- Card 3 -->
-                <a href="resort-inner.html" class="resort-listing-card">
+                <div class="resort-listing-card">
                     <div class="resort-card-img">
-                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Resort">
-                        <span class="resort-card-badge">ðŸ’Ž Luxury Pick</span>
-                        <span class="resort-card-price-tag">From â‚¹5,500/night</span>
+                        <img src="luxuryres.avif"
+                            alt="Resort">
+                        <span class="resort-card-badge">💎 Luxury Pick</span>
+                        <span class="resort-card-price-tag">From ₹5,500/night</span>
                     </div>
                     <div class="resort-card-body">
-                        <div class="resort-card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><strong style="color:#333;">4.9</strong></div>
+                        <div class="resort-card-rating"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><strong
+                                style="color:#333;">4.9</strong></div>
                         <h3>Jhirna Safari Resort</h3>
                         <div class="resort-card-location"><i class="fa-solid fa-location-dot"></i> Jhirna Zone</div>
-                        <div class="resort-card-highlights">
+                        <div class="resort-card-highlights" style="margin-bottom: 0;">
                             <span class="resort-highlight-tag">Premium</span>
                             <span class="resort-highlight-tag">Infinity Pool</span>
                         </div>
-                        <div class="resort-card-footer"><span class="resort-card-cta">View Details <i class="fa-solid fa-arrow-right"></i></span></div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -571,12 +680,12 @@
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
                 <h4 class="section-subtitle">Find Your Perfect Stay</h4>
-                <h2 class="section-title playfair">Resorts By Categories ðŸ¨</h2>
+                <h2 class="section-title playfair">Resorts By Categories 🏨</h2>
             </div>
 
             <div class="rooms-grid">
                 <div class="grid-box" style="border-top: 4px solid #e8b059;">
-                    <h4>â­ Luxury Resorts in Corbett</h4>
+                    <h4>⭐ Luxury Resorts in Corbett</h4>
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i> Taj Corbett Resort & Spa</li>
                         <li><i class="fa-solid fa-circle-check"></i> Aahana Resort Jim Corbett</li>
@@ -584,11 +693,12 @@
                         <li><i class="fa-solid fa-circle-check"></i> voco Jim Corbett by IHG</li>
                         <li><i class="fa-solid fa-circle-check"></i> Tarangi Resort & Spa</li>
                     </ul>
-                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">ðŸ‘‰ Ye resorts premium facilities, spa, riverside views aur luxury stay ke liye famous hain.</p>
+                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">👉 Ye resorts
+                        premium facilities, spa, riverside views aur luxury stay ke liye famous hain.</p>
                 </div>
-                
+
                 <div class="grid-box" style="border-top: 4px solid #e8b059;">
-                    <h4>ðŸŒ¿ Popular Mid-Range Resorts</h4>
+                    <h4>🌿 Popular Mid-Range Resorts</h4>
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i> The Tattwaa Corbett Spa & Resort</li>
                         <li><i class="fa-solid fa-circle-check"></i> Corbett Vanvaas Resort</li>
@@ -596,43 +706,61 @@
                         <li><i class="fa-solid fa-circle-check"></i> Nanau Resort & Spa</li>
                         <li><i class="fa-solid fa-circle-check"></i> Tathastu Wilderness Resort</li>
                     </ul>
-                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">ðŸ‘‰ Ye resorts comfort + affordability ka best balance dete hain.</p>
+                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">👉 Ye resorts
+                        comfort + affordability ka best balance dete hain.</p>
                 </div>
 
                 <div class="grid-box" style="border-top: 4px solid #e8b059;">
-                    <h4>ðŸ’° Budget Hotels & Resorts</h4>
+                    <h4>💰 Budget Hotels & Resorts</h4>
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i> Corbett Hidden Paradise Resort</li>
                         <li><i class="fa-solid fa-circle-check"></i> Creek Wood Resort Jim Corbett</li>
                         <li><i class="fa-solid fa-circle-check"></i> The Greenwich Resort</li>
                         <li><i class="fa-solid fa-circle-check"></i> The Wild Orchid Resort Corbett</li>
                     </ul>
-                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">ðŸ‘‰ Budget travelers ke liye best options hain jahan basic amenities mil jati hain.</p>
+                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">👉 Budget
+                        travelers ke liye best options hain jahan basic amenities mil jati hain.</p>
                 </div>
 
                 <div class="grid-box" style="border-top: 4px solid #e8b059;">
-                    <h4>ðŸ† Other Notable Resorts</h4>
+                    <h4>🏆 Other Notable Resorts</h4>
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i> Acorn Hideaway Resort & Spa</li>
                         <li><i class="fa-solid fa-circle-check"></i> The Cloyster Resort and Spa</li>
                         <li><i class="fa-solid fa-circle-check"></i> Corbett Treat Resort</li>
                     </ul>
-                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">ðŸ‘‰ Ye bhi travellers ke beech kaafi popular choices hain.</p>
+                    <p style="margin-top: 15px; font-size: 0.95rem; font-style: italic; color: #888;">👉 Ye bhi
+                        travellers ke beech kaafi popular choices hain.</p>
                 </div>
             </div>
 
             <!-- Why Stay Section -->
             <div class="info-highlight" style="margin-top: 60px;">
                 <div class="info-highlight-part">
-                    <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-compass" style="font-size: 2rem; margin-right: 15px; color: #e8b059;"></i> Why Stay in Corbett Resorts?</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.8;">Choose Jim Corbett for an unforgettable experience that perfectly blends untamed nature with premium luxury and comfort.</p>
+                    <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-compass"
+                            style="font-size: 2rem; margin-right: 15px; color: #e8b059;"></i> Why Stay in Corbett
+                        Resorts?</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">Choose Jim Corbett for an unforgettable experience
+                        that perfectly blends untamed nature with premium luxury and comfort.</p>
                 </div>
                 <div class="info-highlight-part" style="display: flex; align-items: center;">
                     <ul style="list-style: none; padding: 0; margin: 0; width: 100%;">
-                        <li style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 12px;"><i class="fa-solid fa-leaf" style="color:#e8b059; width: 25px; text-align: center;"></i> Jungle safari access</li>
-                        <li style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 12px;"><i class="fa-solid fa-water" style="color:#e8b059; width: 25px; text-align: center;"></i> Riverside & forest views</li>
-                        <li style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 12px;"><i class="fa-solid fa-gem" style="color:#e8b059; width: 25px; text-align: center;"></i> Luxury + nature experience</li>
-                        <li style="font-size: 1.15rem; display: flex; align-items: center; gap: 12px;"><i class="fa-solid fa-people-group" style="color:#e8b059; width: 25px; text-align: center;"></i> Family, couples & group friendly stays</li>
+                        <li
+                            style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 12px;">
+                            <i class="fa-solid fa-leaf" style="color:#e8b059; width: 25px; text-align: center;"></i>
+                            Jungle safari access</li>
+                        <li
+                            style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 12px;">
+                            <i class="fa-solid fa-water" style="color:#e8b059; width: 25px; text-align: center;"></i>
+                            Riverside & forest views</li>
+                        <li
+                            style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 12px;">
+                            <i class="fa-solid fa-gem" style="color:#e8b059; width: 25px; text-align: center;"></i>
+                            Luxury + nature experience</li>
+                        <li style="font-size: 1.15rem; display: flex; align-items: center; gap: 12px;"><i
+                                class="fa-solid fa-people-group"
+                                style="color:#e8b059; width: 25px; text-align: center;"></i> Family, couples & group
+                            friendly stays</li>
                     </ul>
                 </div>
             </div>
@@ -644,7 +772,7 @@
         <div class="container">
             <div style="text-align: center; margin-bottom: 20px;">
                 <h4 class="section-subtitle">Comfort Redefined</h4>
-                <h2 class="section-title playfair">Types of Accommodations ðŸ›ï¸</h2>
+                <h2 class="section-title playfair">Types of Accommodations 🛏️</h2>
             </div>
 
             <div class="rooms-grid">
@@ -722,7 +850,7 @@
         <div class="container">
             <div style="text-align: center;">
                 <h4 class="section-subtitle">World Class Service</h4>
-                <h2 class="section-title playfair">Resort Facilities & Amenities ðŸŒŸ</h2>
+                <h2 class="section-title playfair">Resort Facilities & Amenities 🌟</h2>
             </div>
 
             <div class="facilities-grid">
@@ -749,7 +877,7 @@
                         <li><i class="fa-solid fa-circle-check"></i> Local Uttarakhand Flavors</li>
                     </ul>
                     <p style="margin-top: 15px; font-size: 0.9rem; font-style: italic; color: #888;">Fresh, hygienic,
-                        and authenticâ€”nothing surprisingly artificial.</p>
+                        and authentic—nothing surprisingly artificial.</p>
                 </div>
 
                 <div class="grid-box">
@@ -780,18 +908,18 @@
             <div class="info-highlight">
                 <div class="info-highlight-part">
                     <h3><i class="fa-solid fa-wallet" style="font-size: 2rem; margin-right: 15px;"></i> Resort Pricing
-                        ðŸ’°</h3>
+                        💰</h3>
                     <p>Prices vary largely depending on the exact season and the specific room category booked.</p>
                     <div style="margin-top: 25px;">
                         <div style="font-size: 1.2rem; font-weight: 500; margin-bottom: 8px;"><span
-                                style="color: #e8b059; font-family: 'Outfit'; font-weight: 600;">Budget:</span> â‚¹2,000 â€“
-                            â‚¹4,000 /night</div>
+                                style="color: #e8b059; font-family: 'Outfit'; font-weight: 600;">Budget:</span> ₹2,000 –
+                            ₹4,000 /night</div>
                         <div style="font-size: 1.2rem; font-weight: 500; margin-bottom: 8px;"><span
                                 style="color: #e8b059; font-family: 'Outfit'; font-weight: 600;">Mid-Range:</span>
-                            â‚¹4,000 â€“ â‚¹8,000 /night</div>
+                            ₹4,000 – ₹8,000 /night</div>
                         <div style="font-size: 1.2rem; font-weight: 500;"><span
-                                style="color: #e8b059; font-family: 'Outfit'; font-weight: 600;">Luxury:</span> â‚¹8,000 â€“
-                            â‚¹20,000+ /night</div>
+                                style="color: #e8b059; font-family: 'Outfit'; font-weight: 600;">Luxury:</span> ₹8,000 –
+                            ₹20,000+ /night</div>
                         <p style="font-size: 0.85rem; margin-top: 15px; font-style: italic; opacity: 0.8;">*Rates
                             frequently change exactly during peak tourist seasons and holidays.</p>
                     </div>
@@ -803,7 +931,8 @@
                         <li
                             style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-shield-halved" style="color:#e8b059;"></i> Verified & Trusted Premium
-                            Resorts</li>
+                            Resorts
+                        </li>
                         <li
                             style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-handshake" style="color:#e8b059;"></i> Best Complete Price Guarantee
@@ -814,7 +943,8 @@
                         </li>
                         <li
                             style="margin-bottom: 15px; font-size: 1.15rem; display: flex; align-items: center; gap: 10px;">
-                            <i class="fa-solid fa-headset" style="color:#e8b059;"></i> Dedicated Travel Assistance</li>
+                            <i class="fa-solid fa-headset" style="color:#e8b059;"></i> Dedicated Travel Assistance
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -829,7 +959,7 @@
             <h4 class="outfit"
                 style="color: #e8b059; margin-bottom: 10px; font-weight: 500; font-size: 1.3rem; letter-spacing: 2px;">
                 SECURE YOUR STAY</h4>
-            <h2 class="playfair" style="margin-bottom: 25px; font-size: 4rem;">Book Your Jungle Resort ðŸ“ž</h2>
+            <h2 class="playfair" style="margin-bottom: 25px; font-size: 4rem;">Book Your Jungle Resort 📞</h2>
             <p
                 style="margin-bottom: 40px; font-size: 1.3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">
                 Plan your perfect jungle getaway with supreme comfort, nature ambiance, and adventure all securely in
@@ -879,7 +1009,7 @@
                     <ul>
                         <li><a href="#">About Park</a></li>
                         <li><a href="#">Safari Booking</a></li>
-                        <li><a href="#">Zones Overview</a></li>
+                        <li><a href="zones.html">Zones Overview</a></li>
                         <li><a href="#">Tour Packages</a></li>
                         <li><a href="#">Gallery</a></li>
                     </ul>
@@ -917,8 +1047,7 @@
         </div>
     </footer>
 
-<script src="nav.js"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
-

@@ -1749,6 +1749,8 @@ img {
     transform: scale(0.8) translateY(-30px);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-top: 8px solid var(--primary-color);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .modal-overlay.show .modal-card {

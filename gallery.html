@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Gallery | Jim Corbett National Park Wildlife Safaris</title>
+    <meta name="description" content="Explore a stunning visual gallery of Jim Corbett National Park. View photographs of Bengal Tigers, leopards, safari expeditions, luxury resorts, and wilderness landscapes.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('assets/wildlife.jpg') center/cover no-repeat;
+            height: 80vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            font-family: var(--font-heading);
+        }
+        .page-hero p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Filter Controls */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        .filter-btn {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 10px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            aspect-ratio: 4 / 3;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-overlay h4 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+            transform: translateY(10px);
+            transition: transform 0.4s ease;
+        }
+        .gallery-overlay p {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transform: translateY(10px);
+            transition: transform 0.4s ease 0.1s;
+        }
+        .gallery-item:hover .gallery-overlay h4,
+        .gallery-item:hover .gallery-overlay p {
+            transform: translateY(0);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 85%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .lightbox-modal.active .lightbox-img {
+            transform: scale(1);
+        }
+        .lightbox-caption {
+            color: var(--white);
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-family: var(--font-heading);
+            text-align: center;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .lightbox-close:hover {
+            color: var(--white);
+            transform: scale(1.1);
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 3rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 10px;
+        }
+        .lightbox-nav:hover {
+            color: var(--white);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .lightbox-prev {
+            left: -80px;
+        }
+        .lightbox-next {
+            right: -80px;
+        }
+        @media (max-width: 768px) {
+            .lightbox-prev {
+                left: -40px;
+            }
+            .lightbox-next {
+                right: -40px;
+            }
+            .lightbox-nav {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919456722521"><i class="fa-solid fa-phone"></i> +91-9456722521</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="jeep.html">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="index.html#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <p>Captured Moments</p>
+            <h1>Jungle Gallery</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 40px;">
+                <h4 class="section-subtitle">Visual Tour</h4>
+                <h2 class="section-title">Jim Corbett in Frames</h2>
+                <p style="max-width: 750px; margin: 0 auto;">Take a peek at the breathtaking flora and fauna, thrilling safari rides, luxurious resort stays, and beautiful terrains. Click on any frame to see it in full view.</p>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+                <button class="filter-btn" data-filter="safari">Safaris</button>
+                <button class="filter-btn" data-filter="resorts">Resorts</button>
+                <button class="filter-btn" data-filter="landscape">Landscapes</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Wildlife 1 -->
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="assets/baby-tiger.jpg" alt="Bengal Tiger Cub">
+                    <div class="gallery-overlay">
+                        <h4>Bengal Tiger Cub</h4>
+                        <p>Wildlife</p>
+                    </div>
+                </div>
+
+                <!-- Safari 1 -->
+                <div class="gallery-item" data-category="safari">
+                    <img src="assets/Canterassets/safari.jpg" alt="Canter Safari in Dhikala">
+                    <div class="gallery-overlay">
+                        <h4>Canter Safari Expedition</h4>
+                        <p>Safaris</p>
+                    </div>
+                </div>
+
+                <!-- Wildlife 2 -->
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="assets/leapord.jpg" alt="Leopard on tree">
+                    <div class="gallery-overlay">
+                        <h4>Indian Leopard on Tree</h4>
+                        <p>Wildlife</p>
+                    </div>
+                </div>
+
+                <!-- Resort 1 -->
+                <div class="gallery-item" data-category="resorts">
+                    <img src="assets/luxury.jpg" alt="Luxury Resort Cottage">
+                    <div class="gallery-overlay">
+                        <h4>Luxury Wildlife Resort</h4>
+                        <p>Resorts</p>
+                    </div>
+                </div>
+
+                <!-- Landscape 1 -->
+                <div class="gallery-item" data-category="landscape">
+                    <img src="assets/adventure.jpg" alt="River rafting adventure">
+                    <div class="gallery-overlay">
+                        <h4>River Rafting on Kosi</h4>
+                        <p>Landscapes</p>
+                    </div>
+                </div>
+
+                <!-- Wildlife 3 -->
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="assets/elephant.jpg" alt="Elephant Herd">
+                    <div class="gallery-overlay">
+                        <h4>Asiatic Elephant Herd</h4>
+                        <p>Wildlife</p>
+                    </div>
+                </div>
+
+                <!-- Safari 2 -->
+                <div class="gallery-item" data-category="safari">
+                    <img src="assets/jeepsafari.png" alt="Jeep Safari in Bijrani">
+                    <div class="gallery-overlay">
+                        <h4>Jeep Safari Ride</h4>
+                        <p>Safaris</p>
+                    </div>
+                </div>
+
+                <!-- Wildlife 4 -->
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="assets/eagle.jpg" alt="Crested Serpent Eagle">
+                    <div class="gallery-overlay">
+                        <h4>Crested Serpent Eagle</h4>
+                        <p>Wildlife</p>
+                    </div>
+                </div>
+
+                <!-- Resort 2 -->
+                <div class="gallery-item" data-category="resorts">
+                    <img src="assets/luxury2.jpg" alt="Forest Villa">
+                    <div class="gallery-overlay">
+                        <h4>Premium Forest Villa</h4>
+                        <p>Resorts</p>
+                    </div>
+                </div>
+
+                <!-- Landscape 2 -->
+                <div class="gallery-item" data-category="landscape">
+                    <img src="assets/camping.jpg" alt="Jungle Camping">
+                    <div class="gallery-overlay">
+                        <h4>Jungle Camping Under Stars</h4>
+                        <p>Landscapes</p>
+                    </div>
+                </div>
+
+                <!-- Wildlife 5 -->
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="assets/tigers.jpg" alt="Royal Bengal Tiger">
+                    <div class="gallery-overlay">
+                        <h4>Royal Bengal Tiger</h4>
+                        <p>Wildlife</p>
+                    </div>
+                </div>
+
+                <!-- Safari 3 -->
+                <div class="gallery-item" data-category="safari">
+                    <img src="assets/safari-jeep.jpg" alt="Stream Crossing Jeep">
+                    <div class="gallery-overlay">
+                        <h4>Crossing Stream on Jeep</h4>
+                        <p>Safaris</p>
+                    </div>
+                </div>
+
+                <!-- Wildlife 6 -->
+                <div class="gallery-item" data-category="wildlife">
+                    <img src="assets/lep.jpg" alt="Leopard Camouflage">
+                    <div class="gallery-overlay">
+                        <h4>Camouflaged Leopard</h4>
+                        <p>Wildlife</p>
+                    </div>
+                </div>
+
+                <!-- Resort 3 -->
+                <div class="gallery-item" data-category="resorts">
+                    <img src="assets/luxuryres.avif" alt="Resort Poolside">
+                    <div class="gallery-overlay">
+                        <h4>Resort Pool and Lounge</h4>
+                        <p>Resorts</p>
+                    </div>
+                </div>
+
+                <!-- Landscape 3 -->
+                <div class="gallery-item" data-category="landscape">
+                    <img src="assets/forest.jpg" alt="Forest Canopy">
+                    <div class="gallery-overlay">
+                        <h4>Dense Sal Forest Canopy</h4>
+                        <p>Landscapes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+            <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <img src="" alt="" class="lightbox-img">
+            <div class="lightbox-caption"></div>
+            <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: var(--white);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Park</a></li>
+                        <li><a href="index.html#safari">Safari Booking</a></li>
+                        <li><a href="zones.html">Zones Overview</a></li>
+                        <li><a href="package.html">Tour Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="index.html#best-time">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="index.html#things-to-do">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9456722521</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = lightbox.querySelector('.lightbox-img');
+            const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+            const prevBtn = lightbox.querySelector('.lightbox-prev');
+            const nextBtn = lightbox.querySelector('.lightbox-next');
+
+            let currentIndex = 0;
+            let activeImages = [];
+
+            // Category Filter Handler
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Lightbox functionality
+            const updateLightboxImage = () => {
+                if (activeImages.length > 0) {
+                    const item = activeImages[currentIndex];
+                    const img = item.querySelector('img');
+                    const h4 = item.querySelector('h4');
+                    lightboxImg.src = img.src;
+                    lightboxCaption.textContent = h4.textContent;
+                }
+            };
+
+            const openLightbox = (index) => {
+                // Collect currently visible/filtered images
+                activeImages = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+                currentIndex = activeImages.indexOf(galleryItems[index]);
+                if (currentIndex === -1) currentIndex = 0;
+                
+                updateLightboxImage();
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            // Click listener for each item
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => openLightbox(index));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+                    closeLightbox();
+                }
+            });
+
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeImages.length > 0) {
+                    currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
+                    updateLightboxImage();
+                }
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeImages.length > 0) {
+                    currentIndex = (currentIndex + 1) % activeImages.length;
+                    updateLightboxImage();
+                }
+            });
+
+            // Key press controls
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            });
+        });
+    </script>
+</body>
+
+</html>

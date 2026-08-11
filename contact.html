@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Jim Corbett National Park Safari Booking</title>
+    <meta name="description" content="Get in touch with Jim Corbett National Park Safari Booking. Fill out the contact form or call us for safari permits, tour packages, and resort booking.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('assets/abouttt.jpg') center/cover no-repeat;
+            height: 80vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            font-family: var(--font-heading);
+        }
+        .page-hero p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Contact Details & Form Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .contact-info-card {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-info-card::before {
+            content: '\f1b0';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: -50px;
+            right: -30px;
+            font-size: 15rem;
+            color: rgba(255, 255, 255, 0.03);
+            pointer-events: none;
+        }
+        .contact-info-card h3 {
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 15px;
+        }
+        .contact-info-list {
+            margin-top: 20px;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .contact-info-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.08);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        .contact-info-item:hover i {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        .contact-info-item h4 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+        .contact-info-item p, .contact-info-item a {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+        .contact-info-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-box {
+            margin-top: 40px;
+        }
+        .social-box h4 {
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        .social-icons-contact {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons-contact a {
+            background: rgba(255, 255, 255, 0.08);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .social-icons-contact a:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        /* Contact Form Styles */
+        .contact-form-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+        .contact-form-container h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .contact-form-container p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-field.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-field label {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+        .form-field input, .form-field select, .form-field textarea {
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            transition: var(--transition);
+        }
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(43, 76, 62, 0.1);
+        }
+        .form-field textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .submit-btn-contact {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .submit-btn-contact:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 80px;
+        }
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 4px solid var(--primary-color);
+            height: 450px;
+            position: relative;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .faq-item {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--accent-color);
+        }
+        .faq-item h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-item h4 i {
+            color: var(--accent-color);
+        }
+        .faq-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Success Alert styling */
+        .alert-success {
+            background-color: #d1e7dd;
+            color: #0f5132;
+            border: 1px solid #badbcc;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top contact bar -->
+    <div class="top-bar">
+        <div class="top-bar-content container">
+            <div class="contact-info">
+                <a href="tel:+919456722521"><i class="fa-solid fa-phone"></i> +91-9456722521</a>
+                <a href="mailto:info@ukcorbett.com"><i class="fa-solid fa-envelope"></i> info@ukcorbett.com</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-paw"></i></span>
+                Jim Corbett<br><span>Wildlife Safaris</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Jim Corbett</a></li>
+                        <li><a href="best-time.html">Best Time to Visit</a></li>
+                        <li><a href="service.html">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="jeep.html">Safari Booking <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jeep.html">Jeep Safari</a></li>
+                        <li><a href="canter-safari.html">Canter Safari</a></li>
+                    </ul>
+                </li>
+                <li><a href="zones.html">Zones</a></li>
+                <li><a href="resort.html">Resorts</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="guide.html">Travel Guide</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <a href="#book-safari" class="btn-primary">Book Safari</a>
+            <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <p>Get in Touch</p>
+            <h1>Contact Us</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 50px;">
+                <h4 class="section-subtitle">Plan Your Visit</h4>
+                <h2 class="section-title">We are Here to Help You</h2>
+                <p style="max-width: 750px; margin: 0 auto;">Have questions about Safari permits, hotel stays, or itinerary planning? Reach out to our travel experts, and we will get back to you within 24 hours.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info Card -->
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to us via call, email, or WhatsApp. Our wildlife consultants are ready to assist you.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>Ramnagar, Nainital District, Uttarakhand, India - 244715</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Call or WhatsApp</h4>
+                                <p><a href="tel:+919456722521">+91-9456722521</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p><a href="mailto:booking@ukcorbett.com">booking@ukcorbett.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Open Daily: 9:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-box">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons-contact">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Container -->
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <p>Provide your tour requirements below for a customized package.</p>
+                    
+                    <div class="alert-success" id="successAlert">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Thank you! Your inquiry has been submitted. We will contact you soon.</span>
+                    </div>
+
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="formName">Full Name *</label>
+                                <input type="text" id="formName" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="formEmail">Email Address *</label>
+                                <input type="email" id="formEmail" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="formPhone">Phone Number *</label>
+                                <input type="tel" id="formPhone" placeholder="Mobile Number" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="formDate">Expected Date *</label>
+                                <input type="date" id="formDate" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="formSafari">Safari Type</label>
+                                <select id="formSafari">
+                                    <option value="none">Choose Safari Type</option>
+                                    <option value="jeep">Jeep Safari</option>
+                                    <option value="canter">Canter Safari</option>
+                                    <option value="package">Complete Resort + Safari Package</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="formZone">Preferred Zone</label>
+                                <select id="formZone">
+                                    <option value="any">Any Zone (Recommended)</option>
+                                    <option value="dhikala">Dhikala Zone</option>
+                                    <option value="bijrani">Bijrani Zone</option>
+                                    <option value="jhirna">Jhirna Zone</option>
+                                    <option value="dhela">Dhela Zone</option>
+                                    <option value="durgadevi">Durga Devi Zone</option>
+                                    <option value="garjiya">Garjiya Zone</option>
+                                    <option value="sitabani">Sitabani Zone</option>
+                                </select>
+                            </div>
+                            <div class="form-field full-width">
+                                <label for="formMessage">Message & Special Requests</label>
+                                <textarea id="formMessage" placeholder="Please specify number of adults/children, and any specific preferences..."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn-contact">
+                            Send Booking Inquiry <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <div class="section-header text-center" style="margin-bottom: 30px;">
+                    <h3 style="font-size: 2rem; color: var(--primary-color);">Our Location on Map</h3>
+                    <p>Find us in Ramnagar, Nainital District (Uttarakhand), the main entry gate town for Jim Corbett National Park.</p>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111244.20458641123!2d79.03456860361546!3d29.402804595293213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a43e498c8c5c7%3A0xe54d24fd99f4d45c!2sRamnagar%2C%20Uttarakhand%20244715!5e0!3m2!1sen!2sin!4v1723370000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="map-section" style="margin-top: 80px;">
+                <div class="section-header text-center" style="margin-bottom: 40px;">
+                    <h3 style="font-size: 2rem; color: var(--primary-color);">Common Booking Queries</h3>
+                    <p>Here are some quick answers to help you plan your contacting and booking.</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4><i class="fa-solid fa-circle-question"></i> How far in advance should I book?</h4>
+                        <p>Safari bookings open 45 days in advance for Indian citizens and 90 days for foreign nationals. Since Dhikala and Bijrani zones are highly popular, we recommend booking as soon as the window opens.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fa-solid fa-circle-question"></i> What documents are required for booking?</h4>
+                        <p>You need a government-approved Photo ID card (Aadhaar Card, Passport, Voter ID, Driving License). You must carry the same physical ID card during the safari.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fa-solid fa-circle-question"></i> Are safari fees refundable?</h4>
+                        <p>No, safari permit fees are collected directly by the Forest Department and are strictly non-refundable and non-transferable under any circumstances.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fa-solid fa-circle-question"></i> What is the difference between Canter and Jeep?</h4>
+                        <p>Jeep safaris host up to 6 people and can enter all zones. Canter safaris are 16-seater open buses that operate exclusively in the Dhikala zone. Canter is ideal for single travelers or large groups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Curve Shape -->
+    <div class="footer-wave" style="margin-bottom: -2px; width: 100%; overflow: hidden; line-height: 0; background: var(--white);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" style="display: block; width: 100%; height: auto; min-height: 80px; pointer-events: none;">
+            <path fill="#163a26" fill-opacity="1" d="M0,64 C480,-64 960,192 1440,64 L1440,160 L0,160 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 25px; display: flex; align-items: center;">
+                        <span class="logo-icon" style="margin-right: 12px; font-size: 1.8rem;"><i class="fa-solid fa-paw" style="color: #e8b059;"></i></span>
+                        <span style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700;">Jim <span style="color: #e8b059; font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: normal; font-size: 2rem; display: inline;">Corbett</span></span>
+                    </a>
+                    <p style="margin-top: 15px;">Your trusted partner for immersive wildlife experiences and premium resort stays at Jim Corbett National Park.</p>
+                    <div class="social-links mt-20">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Park</a></li>
+                        <li><a href="index.html#safari">Safari Booking</a></li>
+                        <li><a href="zones.html">Zones Overview</a></li>
+                        <li><a href="package.html">Tour Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="index.html#best-time">Best Time To Visit</a></li>
+                        <li><a href="#">How To Reach</a></li>
+                        <li><a href="index.html#things-to-do">Things To Do</a></li>
+                        <li><a href="#">Safari Rules</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col-new">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Ramnagar, Nainital District,<br>Uttarakhand, India</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+91-9456722521</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>booking@ukcorbett.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Jim Corbett Safari Booking. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            document.getElementById('contactForm').reset();
+            const alertSuccess = document.getElementById('successAlert');
+            alertSuccess.style.display = 'flex';
+            alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+                alertSuccess.style.display = 'none';
+            }, 8000);
+        }
+    </script>
+</body>
+
+</html>
